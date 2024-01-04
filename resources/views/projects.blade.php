@@ -13,14 +13,18 @@
         <ul class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-16">
             @for ($i = 0; $i < 6; $i++)
             <li>
-                <a href="#">
-                    <div>
+                <a href="#" class="">
+                    <div class="bg-white rounded-md shadow-md p-6 hover:shadow-lg transition duration-300 ease-in-out">
                         <img src="{{asset('img/pr.webp')}}" alt="alt text" class="w-full rounded-md object-cover" width="800" height="600">
                         <div class="mt-4">
-                            <span class="text-blue-400 uppercase tracking-wider text-xs font-medium">Fullstack</span>
+                            <span class="text-blue-500 uppercase tracking-wider text-xs font-medium">Fullstack</span>
                             <h2 class="text-xl font-semibold leading-snug tracking-tight mt-1">Desarrollo de mi portafolio web personal con Laravel y TailwindCSS</h2>
                             <div class="flex gap-2 mt-3 text-sm">
-                                <time class="text-gray-400" datetime="2023-08-06T13:55:00.000Z">Enero 2024</time>
+                                <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1 ">
+                                    <span>
+                                        Enero 2021
+                                    </span>
+                                </span>
                             </div>
                         </div>
                     </div>

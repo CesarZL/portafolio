@@ -24,22 +24,22 @@
 
     <div class="mt-16 border-y py-6 border-slate-100">
         <div>
-            <h2 class="text-center text-slate-500">
+            <h2 class="text-center text-slate-500 font-semibold">
                 Mis certificaciones
             </h2>
             <div class="flex gap-x-8 gap-y-4 md:gap-20 lg:gap-28 items-center justify-center mt-6 flex-wrap">
-                
-                <div class="text-gray-500 my-2 h-7 md:h-9 font-semibold">
-                    CCNA (Cisco)
-                </div>
-                
-                <div class="text-gray-500 my-2 h-7 md:h-9 font-semibold">
-                    Introduction to Cybersecurity (Cisco)
-                </div>
 
-                <div class="text-gray-500 my-2 h-7 md:h-9 font-semibold">
-                    Diseño de Experiencia del Usuario (UX) (Google)
-                </div>
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="09f6daae-885d-4f1b-ad2e-a62711869b8d" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bceddad5-d56f-4014-b0f7-e0a257f36843" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="fa5d9a26-761c-4ae1-8cca-c06048195d23" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+              
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="3be95b04-dcff-4c52-ae93-b721f3111d29" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+                {{-- <div class="text-gray-500 my-2 h-7 md:h-9 font-semibold">
+                    CCNA (Cisco)
+                </div> --}}
 
             </div>
         </div>
@@ -49,10 +49,7 @@
     
     <div class="grid sm:grid-cols-2 gap-10 mx-auto mt-24">
         <div class="relative">
-            {{-- <div class="absolute hidden md:block w-96 h-96 bg-purple-100 rounded-full right-0 top-1/3"></div>
-            <div class="absolute hidden md:block w-44 h-44 bg-purple-100 rounded-full left-10 top-1/4"></div> --}}
-
-            <img src="{{asset('img/me.jpg')}}" alt="Imagen mía" class="rounded-xl w-full max-w-md mx-auto shadow-2xl" loading="lazy" width="1270" height="1652" decoding="async">
+            <img class="rounded-xl w-full max-w-md mx-auto shadow-2xl" loading="lazy" width="1270" height="1652" decoding="async" src="{{asset('img/me.jpg')}}" alt="César Zavala López">
         </div>
         <div class="place-self-center">
             <h2 class="text-5xl text-gray-800 tracking-tight -mt-2">
