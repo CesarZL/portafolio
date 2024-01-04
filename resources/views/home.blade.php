@@ -12,7 +12,7 @@
                     class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
                     Hola, soy <span class="text-indigo-600">César Zavala López</span>                </h2>
                 <p class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-                    Soy Ingeniero en Tecnologías de la Información especializado en el desarrollo de aplicaciones web así como en el diseño de interfaces y experiencia de usuario.
+                    Soy Ingeniero en TI. Me especializo en el desarrollo de aplicaciones web y el diseño de interfaces y experiencias de usuario. Mi enfoque se centra en crear soluciones prácticas y eficientes.
                 </p>
                 <div class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
                     <a class="rounded-full text-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo px-7 py-2.5 bg-white border-2 border-indigo-500 hover:bg-indigo-50 text-indigo-600  flex gap-1 items-center justify-center"
@@ -87,7 +87,7 @@
 
 
 <div class="max-w-screen-xl mx-auto px-5 mb-20">
-    <div class="mt-24">
+    {{-- <div class="mt-24">
         <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
             Estos son algunos de <span class="text-indigo-600"> mis proyectos</span>
         </h2>
@@ -137,7 +137,7 @@
         <a class="bg-gray-100 px-5 py-2 rounded-md hover:bg-gray-200 transition" href="{{route('projects')}}">
             Ver más
         </a>
-    </div>
+    </div> --}}
 
     
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
@@ -154,35 +154,162 @@
 
     <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
         
-        @for ($i = 0; $i < 5; $i++)
-       
-            <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="flex flex-col flex-grow">
                 <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                   
                     <svg viewBox="0 0 24 24" class="text-indigo-500" width="24" height="24"
                         astro-icon="fluent:document-javascript-24-regular">
                         <path fill="currentColor"
                             d="M18 20.5h-7.034a2.939 2.939 0 0 1-.702 1.5H18a2 2 0 0 0 2-2V9.828a2 2 0 0 0-.586-1.414l-5.829-5.828a.491.491 0 0 0-.049-.04.63.63 0 0 1-.036-.03 2.072 2.072 0 0 0-.219-.18.652.652 0 0 0-.08-.044l-.048-.024-.05-.029c-.054-.031-.109-.063-.166-.087a1.977 1.977 0 0 0-.624-.138.56.56 0 0 1-.059-.007.605.605 0 0 0-.082-.007H6a2 2 0 0 0-2 2v10.018a1.745 1.745 0 0 1 1.5.508V4a.5.5 0 0 1 .5-.5h6V8a2 2 0 0 0 2 2h4.5v10a.5.5 0 0 1-.5.5zm-.622-12H14a.5.5 0 0 1-.5-.5V4.621L17.378 8.5zM4.25 15a.75.75 0 0 1 .75.75V20a2 2 0 1 1-4 0v-.25a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 1 0v-4.25a.75.75 0 0 1 .75-.75zm3.7 0A1.95 1.95 0 0 0 6 16.95v.234c0 .614.323 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20A.75.75 0 0 0 6 20v.05A1.95 1.95 0 0 0 7.95 22h.1A1.95 1.95 0 0 0 10 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 8.05 15h-.1z">
                         </path>
                     </svg>
-                    
                 </div>
-
                 <div>
-                    <h3 class="font-semibold text-lg">Nombre del proyecto</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">
-                        Descripción breve del proyecto para que el usuario sepa de que trata y se anime a visitarlo.
+                    <h3 class="font-semibold text-lg mt-4">
+                        Voluntariado
+                    </h3>
+                    <h2 class="text-slate-500 font-semibold">
+                        Un Cachito de Luz A.C.
+                    </h2>
+                    <p class="text-slate-500 mt-2 leading-relaxed mb-5">
+                        Diseño de base datos y sistema de captura de entrega de donaciones de medicamentos realizado en Visual Basic.
                     </p>
                 </div>
-
-                <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1 ">
-                    <span>
-                        Junio 2021 - Actualidad
-                    </span>
-                </span>
             </div>
+            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1">
+                2017 - 2022
+            </span>
+        </div>
             
-        @endfor
+
+        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="flex flex-col flex-grow">
+                <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+                    <svg viewBox="0 0 24 24" class="text-indigo-500" width="24" height="24"
+                        astro-icon="fluent:document-javascript-24-regular">
+                        <path fill="currentColor"
+                            d="M18 20.5h-7.034a2.939 2.939 0 0 1-.702 1.5H18a2 2 0 0 0 2-2V9.828a2 2 0 0 0-.586-1.414l-5.829-5.828a.491.491 0 0 0-.049-.04.63.63 0 0 1-.036-.03 2.072 2.072 0 0 0-.219-.18.652.652 0 0 0-.08-.044l-.048-.024-.05-.029c-.054-.031-.109-.063-.166-.087a1.977 1.977 0 0 0-.624-.138.56.56 0 0 1-.059-.007.605.605 0 0 0-.082-.007H6a2 2 0 0 0-2 2v10.018a1.745 1.745 0 0 1 1.5.508V4a.5.5 0 0 1 .5-.5h6V8a2 2 0 0 0 2 2h4.5v10a.5.5 0 0 1-.5.5zm-.622-12H14a.5.5 0 0 1-.5-.5V4.621L17.378 8.5zM4.25 15a.75.75 0 0 1 .75.75V20a2 2 0 1 1-4 0v-.25a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 1 0v-4.25a.75.75 0 0 1 .75-.75zm3.7 0A1.95 1.95 0 0 0 6 16.95v.234c0 .614.323 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20A.75.75 0 0 0 6 20v.05A1.95 1.95 0 0 0 7.95 22h.1A1.95 1.95 0 0 0 10 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 8.05 15h-.1z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mt-4">
+                       Dessarrollador Full-Stack
+                    </h3>
+                    <h2 class="text-slate-500 font-semibold">
+                        ITACE
+                    </h2>
+                    <p class="text-slate-500 mt-2 leading-relaxed mb-5">
+                        Diseño y desarrollo de una aplicación .NET programada en Visual Basic que 
+                        permite el registro de asistencia con códigos QR y alerta a los tutores de la actividad de 
+                        entrada y salida del plantel. 
+                    </p>
+                </div>
+            </div>
+            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1">
+                FEB 2020 - MAR 2020
+            </span>
+        </div>
+
+        
+        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="flex flex-col flex-grow">
+                <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+                    <svg viewBox="0 0 24 24" class="text-indigo-500" width="24" height="24"
+                        astro-icon="fluent:document-javascript-24-regular">
+                        <path fill="currentColor"
+                            d="M18 20.5h-7.034a2.939 2.939 0 0 1-.702 1.5H18a2 2 0 0 0 2-2V9.828a2 2 0 0 0-.586-1.414l-5.829-5.828a.491.491 0 0 0-.049-.04.63.63 0 0 1-.036-.03 2.072 2.072 0 0 0-.219-.18.652.652 0 0 0-.08-.044l-.048-.024-.05-.029c-.054-.031-.109-.063-.166-.087a1.977 1.977 0 0 0-.624-.138.56.56 0 0 1-.059-.007.605.605 0 0 0-.082-.007H6a2 2 0 0 0-2 2v10.018a1.745 1.745 0 0 1 1.5.508V4a.5.5 0 0 1 .5-.5h6V8a2 2 0 0 0 2 2h4.5v10a.5.5 0 0 1-.5.5zm-.622-12H14a.5.5 0 0 1-.5-.5V4.621L17.378 8.5zM4.25 15a.75.75 0 0 1 .75.75V20a2 2 0 1 1-4 0v-.25a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 1 0v-4.25a.75.75 0 0 1 .75-.75zm3.7 0A1.95 1.95 0 0 0 6 16.95v.234c0 .614.323 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20A.75.75 0 0 0 6 20v.05A1.95 1.95 0 0 0 7.95 22h.1A1.95 1.95 0 0 0 10 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 8.05 15h-.1z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mt-4">
+                        Dessarrollador Back-End
+                    </h3>
+                    <h2 class="text-slate-500 font-semibold">
+                        Cactu Nieves
+                    </h2>
+                    <p class="text-slate-500 mt-2 leading-relaxed mb-5">
+                        Diseño, desarrollo e implementación de una aplicación .NET programada en C# 
+                        que permite el control sobre los procesos de venta y administración de la empresa.
+                    </p>
+
+                </div>
+            </div>
+            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1">
+                MAR 2022 - ABR 2022
+            </span>
+        </div>
+        
+        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="flex flex-col flex-grow">
+                <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+                    <svg viewBox="0 0 24 24" class="text-indigo-500" width="24" height="24"
+                        astro-icon="fluent:document-javascript-24-regular">
+                        <path fill="currentColor"
+                            d="M18 20.5h-7.034a2.939 2.939 0 0 1-.702 1.5H18a2 2 0 0 0 2-2V9.828a2 2 0 0 0-.586-1.414l-5.829-5.828a.491.491 0 0 0-.049-.04.63.63 0 0 1-.036-.03 2.072 2.072 0 0 0-.219-.18.652.652 0 0 0-.08-.044l-.048-.024-.05-.029c-.054-.031-.109-.063-.166-.087a1.977 1.977 0 0 0-.624-.138.56.56 0 0 1-.059-.007.605.605 0 0 0-.082-.007H6a2 2 0 0 0-2 2v10.018a1.745 1.745 0 0 1 1.5.508V4a.5.5 0 0 1 .5-.5h6V8a2 2 0 0 0 2 2h4.5v10a.5.5 0 0 1-.5.5zm-.622-12H14a.5.5 0 0 1-.5-.5V4.621L17.378 8.5zM4.25 15a.75.75 0 0 1 .75.75V20a2 2 0 1 1-4 0v-.25a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 1 0v-4.25a.75.75 0 0 1 .75-.75zm3.7 0A1.95 1.95 0 0 0 6 16.95v.234c0 .614.323 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20A.75.75 0 0 0 6 20v.05A1.95 1.95 0 0 0 7.95 22h.1A1.95 1.95 0 0 0 10 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 8.05 15h-.1z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mt-4">
+                        Desarrollador Front-End
+                    </h3>
+                    <h2 class="text-slate-500 font-semibold">
+                        SVAM international
+                    </h2>
+                    <p class="text-slate-500 mt-2 leading-relaxed mb-5">
+                        Creación y ejecución de la actualización de la interfaz de la aplicación web LEADS, 
+                        utilizando Bootstrap 5, incorporando Datatables y Google Charts 
+                    </p>
+
+                </div>
+            </div>
+            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1">
+                ENE 2022 - FEB 2022
+            </span>
+        </div>
+
+        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="flex flex-col flex-grow">
+                <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+                    <svg viewBox="0 0 24 24" class="text-indigo-500" width="24" height="24"
+                        astro-icon="fluent:document-javascript-24-regular">
+                        <path fill="currentColor"
+                            d="M18 20.5h-7.034a2.939 2.939 0 0 1-.702 1.5H18a2 2 0 0 0 2-2V9.828a2 2 0 0 0-.586-1.414l-5.829-5.828a.491.491 0 0 0-.049-.04.63.63 0 0 1-.036-.03 2.072 2.072 0 0 0-.219-.18.652.652 0 0 0-.08-.044l-.048-.024-.05-.029c-.054-.031-.109-.063-.166-.087a1.977 1.977 0 0 0-.624-.138.56.56 0 0 1-.059-.007.605.605 0 0 0-.082-.007H6a2 2 0 0 0-2 2v10.018a1.745 1.745 0 0 1 1.5.508V4a.5.5 0 0 1 .5-.5h6V8a2 2 0 0 0 2 2h4.5v10a.5.5 0 0 1-.5.5zm-.622-12H14a.5.5 0 0 1-.5-.5V4.621L17.378 8.5zM4.25 15a.75.75 0 0 1 .75.75V20a2 2 0 1 1-4 0v-.25a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 1 0v-4.25a.75.75 0 0 1 .75-.75zm3.7 0A1.95 1.95 0 0 0 6 16.95v.234c0 .614.323 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20A.75.75 0 0 0 6 20v.05A1.95 1.95 0 0 0 7.95 22h.1A1.95 1.95 0 0 0 10 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 8.05 15h-.1z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mt-4">
+                        Desarrollador Full-Stack
+                    </h3>
+                    <h2 class="text-slate-500 font-semibold">
+                        UPV
+                    </h2>
+                    <p class="text-slate-500 mt-2 leading-relaxed mb-5">
+                        Diseño y desarrollo de una aplicación en LARAVEL y FLASK en conjunto con ARDUINO 
+                        que permite el pase de lista con reconocimiento facial a alumnos de la Universidad 
+                        Politécnica de Victoria, en proceso de implementación interno de la institución.
+                    </p>
+
+                </div>
+            </div>
+            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1">
+                SEP 2023 - DIC 2023
+            </span>
+        </div>
+
+
+        
+
+                    
+        
+       
+            
+
+            
+       
 
     </div>
 </div>
@@ -192,3 +319,32 @@
 
 
 @endsection
+
+
+
+{{-- VOLUNTARIADO
+Un Cachito de Luz A.C. l Cd. Victoria/Tamaulipas 2017 - 2022
+Diseño de base datos y sistema de captura de entrega de donaciones de 
+medicamentos realizado en Visual Basic. 
+
+DESARROLLADOR FULL-STACK 
+ITACE l Cd. Victoria/Tamaulipas FEB 2020 - MAR 2020
+Diseño y desarrollo de una aplicación .NET programada en lenguaje Visual Basic que 
+permite el registro de asistencia con códigos QR y alerta a los tutores de la actividad de 
+entrada y salida del plantel. 
+
+DESARROLLADOR BACK-END 
+Cactu Nieves l Cd. Victoria/Tamaulipas MAR 2022 - ABR 2022
+Diseño, desarrollo e implementación de una aplicación .NET programada en lenguaje C# 
+que permite el control sobre los procesos de venta y administración de la empresa.
+
+DESARROLLADOR FRONT-END 
+SVAM international l Cd. Victoria/Tamaulipas ENE 2022 - FEB 2022
+Creación y ejecución de la actualización de la interfaz de la aplicación web LEADS, 
+utilizando Bootstrap 5, incorporando Datatables y Google Charts
+
+DESARROLLADOR FULL-STACK 
+UPV l Cd. Victoria/Tamaulipas SEP 2023 - DIC 2023
+Diseño y desarrollo de una aplicación en LARAVEL y FLASK en conjunto con ARDUINO 
+que permite el pase de lista con reconocimiento facial a alumnos de la Universidad 
+Politécnica de Victoria en proceso de implementación interno de la institución.  --}}

@@ -32,13 +32,13 @@
                         <a class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full" href="{{ route('about') }}">Sobre mí</a>
                     </li>
 
-                    <li>
+                    {{-- <li>
                         <a class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full" href="{{ route('projects') }}">Mis proyectos</a>
                     </li>
 
                     <li>
                         <a class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full" href="{{ route('tech') }}">Tecnologías</a>
-                    </li>
+                    </li> --}}
 
                     <li>
                         <a class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full" href="{{ route('contact') }}">Contacto</a>
