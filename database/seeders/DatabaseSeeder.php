@@ -17,11 +17,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create([
             'name' => 'César Zavala',
             'email' => 'cesarzavalamx15@gmail.com',
-            //añadir campo de password encriptada
             'password' => bcrypt('zavala1511'),
         ]);
+
     }
 }
 
-
-// $table->string('password');

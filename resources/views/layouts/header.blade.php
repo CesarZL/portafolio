@@ -25,11 +25,11 @@
             <nav class="astronav-items astronav-toggle hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
                 <ul class="flex flex-col lg:flex-row lg:gap-3">
                     <li>
-                        <a class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full" href="{{ route('home') }}">Inicio</a>
+                        <a class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full" href="{{ route('home') }}"  wire:navigate>Inicio</a>
                     </li>
 
                     <li>
-                        <a class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full" href="{{ route('about') }}">Sobre mí</a>
+                        <a class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full" href="{{ route('about') }}" wire:navigate>Sobre mí</a>
                     </li>
 
                     {{-- <li>
@@ -41,7 +41,7 @@
                     </li> --}}
 
                     <li>
-                        <a class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full" href="{{ route('contact') }}">Contacto</a>
+                        <a class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full" href="{{ route('contact') }}" wire:navigate>Contacto</a>
                     </li>
                 </ul>
 

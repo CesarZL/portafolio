@@ -139,6 +139,7 @@
         </a>
     </div> --}}
 
+
     
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
         <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1 ">
@@ -152,164 +153,158 @@
         </p>
     </div>
 
+
+
+    {{-- boton que abre modal de tailwinds css con flowbite para agregar experiencia laboral --}}
+    @auth
+
+       {{-- arreglar background del boton para que sea verde y no blanco --}}
+         <div class="flex justify-center items-center mt-10 gap-4">
+            <button class="bg-green-100 px-5 py-2 rounded-md hover:bg-green-200 transition" data-modal-target="static-modal" data-modal-toggle="static-modal">
+                Agregar Trabajo <span class="text-green-600">+</span>
+            </button>
+        </div>
+
+         <!-- Main modal -->
+        <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow ">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                        <h3 class="text-xl font-semibold text-gray-900">
+                            Agregar experiencia laboral
+                        </h3>
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="static-modal">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                            </svg>
+                            <span class="sr-only">Cerrar modal</span>
+                        </button>
+                    </div>
+                   
+                    <!-- Modal body -->
+                    <div class="p-4 md:p-5 space-y-4">
+
+                        <form action="{{route('home.store')}}" method="POST" id="form">
+                            @csrf
+
+                            <div class="mb-5">
+                                <label for="position" class="sr-only">Puesto</label>
+                                <input id="position" type="text" placeholder="Puesto" name="position" required="" class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100">
+                                @error('position')
+                                <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-5">
+                                <label for="place" class="sr-only">Lugar</label>
+                                <input id="place" type="text" placeholder="Lugar" name="place" required="" class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100">
+                                @error('place')
+                                <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-5">
+                                <label for="description" class="sr-only">Descripción</label>
+                                <textarea id="description" type="text" placeholder="Descripción" name="description" required="" class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"></textarea>
+                                @error('description')
+                                <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-5">
+                                <label for="start_date" class="sr-only">Fecha de inicio</label>
+                                <input id="start_date" type="date" placeholder="Fecha de inicio" name="start_date" required="" class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100">
+                                @error('start_date')
+                                <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-5">
+                                <label for="end_date" class="sr-only">Fecha de fin</label>
+                                <input id="end_date" type="date" placeholder="Fecha de fin" name="end_date" required="" class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100">
+                                @error('end_date')
+                                <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </form>
+                        
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b gap-4">
+                        <a class="bg-green-200 px-5 py-2 rounded-md hover:bg-green-300 transition cursor-pointer" onclick="event.preventDefault(); document.getElementById('form').submit();">
+                            Agregar Trabajo
+                        </a>
+
+                        
+                        <button class="bg-red-200 px-5 py-2 rounded-md hover:bg-red-300 transition" data-modal-target="static-modal" data-modal-toggle="static-modal">
+                            Cancelar
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    @endauth
+  
     <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
         
-        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-            <div class="flex flex-col flex-grow">
-                <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <svg viewBox="0 0 24 24" class="text-indigo-500" width="24" height="24"
-                        astro-icon="fluent:document-javascript-24-regular">
-                        <path fill="currentColor"
-                            d="M18 20.5h-7.034a2.939 2.939 0 0 1-.702 1.5H18a2 2 0 0 0 2-2V9.828a2 2 0 0 0-.586-1.414l-5.829-5.828a.491.491 0 0 0-.049-.04.63.63 0 0 1-.036-.03 2.072 2.072 0 0 0-.219-.18.652.652 0 0 0-.08-.044l-.048-.024-.05-.029c-.054-.031-.109-.063-.166-.087a1.977 1.977 0 0 0-.624-.138.56.56 0 0 1-.059-.007.605.605 0 0 0-.082-.007H6a2 2 0 0 0-2 2v10.018a1.745 1.745 0 0 1 1.5.508V4a.5.5 0 0 1 .5-.5h6V8a2 2 0 0 0 2 2h4.5v10a.5.5 0 0 1-.5.5zm-.622-12H14a.5.5 0 0 1-.5-.5V4.621L17.378 8.5zM4.25 15a.75.75 0 0 1 .75.75V20a2 2 0 1 1-4 0v-.25a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 1 0v-4.25a.75.75 0 0 1 .75-.75zm3.7 0A1.95 1.95 0 0 0 6 16.95v.234c0 .614.323 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20A.75.75 0 0 0 6 20v.05A1.95 1.95 0 0 0 7.95 22h.1A1.95 1.95 0 0 0 10 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 8.05 15h-.1z">
-                        </path>
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mt-4">
-                        Voluntariado
-                    </h3>
-                    <h2 class="text-slate-500 font-semibold">
-                        Un Cachito de Luz A.C.
-                    </h2>
-                    <p class="text-slate-500 mt-2 leading-relaxed mb-5">
-                        Diseño de base datos y sistema de captura de entrega de donaciones de medicamentos realizado en Visual Basic.
-                    </p>
-                </div>
-            </div>
-            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1">
-                2017 - 2022
-            </span>
-        </div>
+        @foreach ($experiences as $experience)
             
-
-        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+        <div class="flex flex-col gap-4 items-start group hover:bg-slate-100 hover:border-slate-200 border border-transparent rounded-lg transition-all md:-m-5 p-5 bg-slate-50">
             <div class="flex flex-col flex-grow">
-                <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <svg viewBox="0 0 24 24" class="text-indigo-500" width="24" height="24"
-                        astro-icon="fluent:document-javascript-24-regular">
-                        <path fill="currentColor"
-                            d="M18 20.5h-7.034a2.939 2.939 0 0 1-.702 1.5H18a2 2 0 0 0 2-2V9.828a2 2 0 0 0-.586-1.414l-5.829-5.828a.491.491 0 0 0-.049-.04.63.63 0 0 1-.036-.03 2.072 2.072 0 0 0-.219-.18.652.652 0 0 0-.08-.044l-.048-.024-.05-.029c-.054-.031-.109-.063-.166-.087a1.977 1.977 0 0 0-.624-.138.56.56 0 0 1-.059-.007.605.605 0 0 0-.082-.007H6a2 2 0 0 0-2 2v10.018a1.745 1.745 0 0 1 1.5.508V4a.5.5 0 0 1 .5-.5h6V8a2 2 0 0 0 2 2h4.5v10a.5.5 0 0 1-.5.5zm-.622-12H14a.5.5 0 0 1-.5-.5V4.621L17.378 8.5zM4.25 15a.75.75 0 0 1 .75.75V20a2 2 0 1 1-4 0v-.25a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 1 0v-4.25a.75.75 0 0 1 .75-.75zm3.7 0A1.95 1.95 0 0 0 6 16.95v.234c0 .614.323 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20A.75.75 0 0 0 6 20v.05A1.95 1.95 0 0 0 7.95 22h.1A1.95 1.95 0 0 0 10 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 8.05 15h-.1z">
-                        </path>
-                    </svg>
-                </div>
+                
+                @auth
+                    <div class="flex items-center gap-2 mb-5">
+                        <form method="POST" action="{{ route('home.destroy', $experience->id) }}" class="delete-form">
+                            @csrf
+                            <button type="submit"class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0 hover:bg-red-500">
+                                <img src="{{asset('img/logo.svg')}}" alt="Feature image" class="h-full w-full object-contain" loading="lazy" width="909" height="823" decoding="async">
+                            </button>
+                        </form>    
+                        
+                        <button class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0 hover:bg-indigo-500" data-modal-target="static-modal" data-modal-toggle="static-modal">
+                            <img src="{{asset('img/logo.svg')}}" alt="Feature image" class="h-full w-full object-contain" loading="lazy" width="909" height="823" decoding="async">
+                        </button>
+
+                    </div>     
+                @endauth
+
                 <div>
-                    <h3 class="font-semibold text-lg mt-4">
-                       Dessarrollador Full-Stack
+                    <h3 class="font-semibold text-lg">
+                        {{$experience->position}}
                     </h3>
                     <h2 class="text-slate-500 font-semibold">
-                        ITACE
+                        {{$experience->place}}
                     </h2>
-                    <p class="text-slate-500 mt-2 leading-relaxed mb-5">
-                        Diseño y desarrollo de una aplicación .NET programada en Visual Basic que 
-                        permite el registro de asistencia con códigos QR y alerta a los tutores de la actividad de 
-                        entrada y salida del plantel. 
-                    </p>
-                </div>
-            </div>
-            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1">
-                FEB 2020 - MAR 2020
-            </span>
-        </div>
-
-        
-        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-            <div class="flex flex-col flex-grow">
-                <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <svg viewBox="0 0 24 24" class="text-indigo-500" width="24" height="24"
-                        astro-icon="fluent:document-javascript-24-regular">
-                        <path fill="currentColor"
-                            d="M18 20.5h-7.034a2.939 2.939 0 0 1-.702 1.5H18a2 2 0 0 0 2-2V9.828a2 2 0 0 0-.586-1.414l-5.829-5.828a.491.491 0 0 0-.049-.04.63.63 0 0 1-.036-.03 2.072 2.072 0 0 0-.219-.18.652.652 0 0 0-.08-.044l-.048-.024-.05-.029c-.054-.031-.109-.063-.166-.087a1.977 1.977 0 0 0-.624-.138.56.56 0 0 1-.059-.007.605.605 0 0 0-.082-.007H6a2 2 0 0 0-2 2v10.018a1.745 1.745 0 0 1 1.5.508V4a.5.5 0 0 1 .5-.5h6V8a2 2 0 0 0 2 2h4.5v10a.5.5 0 0 1-.5.5zm-.622-12H14a.5.5 0 0 1-.5-.5V4.621L17.378 8.5zM4.25 15a.75.75 0 0 1 .75.75V20a2 2 0 1 1-4 0v-.25a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 1 0v-4.25a.75.75 0 0 1 .75-.75zm3.7 0A1.95 1.95 0 0 0 6 16.95v.234c0 .614.323 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20A.75.75 0 0 0 6 20v.05A1.95 1.95 0 0 0 7.95 22h.1A1.95 1.95 0 0 0 10 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 8.05 15h-.1z">
-                        </path>
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mt-4">
-                        Dessarrollador Back-End
-                    </h3>
-                    <h2 class="text-slate-500 font-semibold">
-                        Cactu Nieves
-                    </h2>
-                    <p class="text-slate-500 mt-2 leading-relaxed mb-5">
-                        Diseño, desarrollo e implementación de una aplicación .NET programada en C# 
-                        que permite el control sobre los procesos de venta y administración de la empresa.
-                    </p>
-
-                </div>
-            </div>
-            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1">
-                MAR 2022 - ABR 2022
-            </span>
-        </div>
-        
-        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-            <div class="flex flex-col flex-grow">
-                <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <svg viewBox="0 0 24 24" class="text-indigo-500" width="24" height="24"
-                        astro-icon="fluent:document-javascript-24-regular">
-                        <path fill="currentColor"
-                            d="M18 20.5h-7.034a2.939 2.939 0 0 1-.702 1.5H18a2 2 0 0 0 2-2V9.828a2 2 0 0 0-.586-1.414l-5.829-5.828a.491.491 0 0 0-.049-.04.63.63 0 0 1-.036-.03 2.072 2.072 0 0 0-.219-.18.652.652 0 0 0-.08-.044l-.048-.024-.05-.029c-.054-.031-.109-.063-.166-.087a1.977 1.977 0 0 0-.624-.138.56.56 0 0 1-.059-.007.605.605 0 0 0-.082-.007H6a2 2 0 0 0-2 2v10.018a1.745 1.745 0 0 1 1.5.508V4a.5.5 0 0 1 .5-.5h6V8a2 2 0 0 0 2 2h4.5v10a.5.5 0 0 1-.5.5zm-.622-12H14a.5.5 0 0 1-.5-.5V4.621L17.378 8.5zM4.25 15a.75.75 0 0 1 .75.75V20a2 2 0 1 1-4 0v-.25a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 1 0v-4.25a.75.75 0 0 1 .75-.75zm3.7 0A1.95 1.95 0 0 0 6 16.95v.234c0 .614.323 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20A.75.75 0 0 0 6 20v.05A1.95 1.95 0 0 0 7.95 22h.1A1.95 1.95 0 0 0 10 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 8.05 15h-.1z">
-                        </path>
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mt-4">
-                        Desarrollador Front-End
-                    </h3>
-                    <h2 class="text-slate-500 font-semibold">
-                        SVAM international
-                    </h2>
-                    <p class="text-slate-500 mt-2 leading-relaxed mb-5">
-                        Creación y ejecución de la actualización de la interfaz de la aplicación web LEADS, 
-                        utilizando Bootstrap 5, incorporando Datatables y Google Charts 
-                    </p>
-
-                </div>
-            </div>
-            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1">
-                ENE 2022 - FEB 2022
-            </span>
-        </div>
-
-        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-            <div class="flex flex-col flex-grow">
-                <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-                    <svg viewBox="0 0 24 24" class="text-indigo-500" width="24" height="24"
-                        astro-icon="fluent:document-javascript-24-regular">
-                        <path fill="currentColor"
-                            d="M18 20.5h-7.034a2.939 2.939 0 0 1-.702 1.5H18a2 2 0 0 0 2-2V9.828a2 2 0 0 0-.586-1.414l-5.829-5.828a.491.491 0 0 0-.049-.04.63.63 0 0 1-.036-.03 2.072 2.072 0 0 0-.219-.18.652.652 0 0 0-.08-.044l-.048-.024-.05-.029c-.054-.031-.109-.063-.166-.087a1.977 1.977 0 0 0-.624-.138.56.56 0 0 1-.059-.007.605.605 0 0 0-.082-.007H6a2 2 0 0 0-2 2v10.018a1.745 1.745 0 0 1 1.5.508V4a.5.5 0 0 1 .5-.5h6V8a2 2 0 0 0 2 2h4.5v10a.5.5 0 0 1-.5.5zm-.622-12H14a.5.5 0 0 1-.5-.5V4.621L17.378 8.5zM4.25 15a.75.75 0 0 1 .75.75V20a2 2 0 1 1-4 0v-.25a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 1 0v-4.25a.75.75 0 0 1 .75-.75zm3.7 0A1.95 1.95 0 0 0 6 16.95v.234c0 .614.323 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20A.75.75 0 0 0 6 20v.05A1.95 1.95 0 0 0 7.95 22h.1A1.95 1.95 0 0 0 10 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 8.05 15h-.1z">
-                        </path>
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mt-4">
-                        Desarrollador Full-Stack
-                    </h3>
-                    <h2 class="text-slate-500 font-semibold">
-                        UPV
-                    </h2>
-                    <p class="text-slate-500 mt-2 leading-relaxed mb-5">
-                        Diseño y desarrollo de una aplicación en LARAVEL y FLASK en conjunto con ARDUINO 
-                        que permite el pase de lista con reconocimiento facial a alumnos de la Universidad 
-                        Politécnica de Victoria, en proceso de implementación interno de la institución.
-                    </p>
-
-                </div>
-            </div>
-            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1">
-                SEP 2023 - DIC 2023
-            </span>
-        </div>
-
-
-        
-
                     
-        
-       
-            
+                    <p class="text-slate-500 mt-2 leading-relaxed mb-2">
+                        {{$experience->description}}
+                    </p>
 
-            
-       
+                </div>
+            </div>
+            <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1 uppercase mb-2">
+                {{\Carbon\Carbon::parse($experience->start_date)->locale('es_ES')->isoFormat('MMM YYYY')}} - {{\Carbon\Carbon::parse($experience->end_date)->locale('es_ES')->isoFormat('MMM YYYY')}}
+            </span>
+        </div>
+        
+        @endforeach
+        
 
     </div>
 </div>
