@@ -17,8 +17,6 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css','resources/js/app.js'])
 
-    @livewireStyles
-
 </head>
 <body class="min-h-screen">
     <div id="app">      
@@ -34,6 +32,5 @@
         </main>
     </div>
 
-    @livewireScripts
 </body>
 </html>
