@@ -40,3 +40,7 @@ Route::get('/tech', [App\Http\Controllers\TechController::class, 'index'])->name
 Route::get('/blog', function () {
     return view('blog');
 });
+
+Route::get('/mail', function () {
+    return view('emails.mensaje-portafolio');
+});

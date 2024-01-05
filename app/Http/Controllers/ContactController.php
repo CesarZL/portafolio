@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\MensajePortafolio;
+
 
 
 class ContactController extends Controller
@@ -22,6 +23,10 @@ class ContactController extends Controller
             'email' => 'required|email',
             'message'=>'required'
         ]);
+
+        Mail::to('cesarzavalamx15@gmail.com') -> send(new MensajePortafolio($request->name, $request->email, $request->message));
+
+        return redirect()->route('contact')->with('info', 'Mensaje enviado');
 
 
     }

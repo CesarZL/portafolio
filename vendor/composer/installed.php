@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '268f6cbf434f58367f97cc544eba7501d7117cae',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -93,6 +93,15 @@
             'install_path' => __DIR__ . '/../fakerphp/faker',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'fedeisas/laravel-mail-css-inliner' => array(
+            'pretty_version' => '5.2.1',
+            'version' => '5.2.1.0',
+            'reference' => '47c41eddc9000f8e1579659e4953a3f36fe5c579',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../fedeisas/laravel-mail-css-inliner',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'filp/whoops' => array(
             'pretty_version' => '2.15.4',
@@ -380,9 +389,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '268f6cbf434f58367f97cc544eba7501d7117cae',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -514,6 +523,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'motomedialab/laravel-vite-helper' => array(
+            'pretty_version' => 'v1.4.1',
+            'version' => '1.4.1.0',
+            'reference' => '3f6c4b0fb34e4fecfd10bf9ea21a7a77f41747fe',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../motomedialab/laravel-vite-helper',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'mtdowling/cron-expression' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -580,6 +598,15 @@
             'reference' => '8ab0b32c8caa4a2e09700ea32925441385e4a5dc',
             'type' => 'library',
             'install_path' => __DIR__ . '/../nunomaduro/termwind',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'paragonie/random_compat' => array(
+            'pretty_version' => 'v9.99.100',
+            'version' => '9.99.100.0',
+            'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../paragonie/random_compat',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
