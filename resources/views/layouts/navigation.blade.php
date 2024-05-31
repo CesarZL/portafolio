@@ -1,4 +1,4 @@
-<nav class="sticky top-0 z-40 transition-all sticky-header">
+<nav x-data="{ open: false }" class="sticky top-0 z-40 transition-all sticky-header" active="">
 
     <!-- Primary Navigation Menu -->
     <div class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
