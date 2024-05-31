@@ -1,6 +1,6 @@
 const scrollY = 20;
-const defaultClass = "bg-white/80 dark:bg-gray-900/90 border-transparent";
-const activeClass = "dark:bg-gray-900/90 bg-white/80 border-gray-200 dark:border-gray-700 backdrop-blur-lg";
+const defaultClass = "border-transparent";
+const activeClass = "bg-white/80 dark:bg-gray-900/80 border-gray-200 dark:border-gray-700 backdrop-blur-lg";
 
 let scrollPos = 0;
 let ticking = false;
