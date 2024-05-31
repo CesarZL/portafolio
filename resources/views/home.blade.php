@@ -131,7 +131,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-16 gap-10">
             @for ($i = 0; $i < 3; $i++) 
             <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-500 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
                     <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
                     <div class="my-5">
                         <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
@@ -176,7 +176,7 @@
 
         <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
             @for ($i = 0; $i < 6; $i++) 
-                <div class="rounded-lg p-8 bg-gray-50 dark:bg-gray-800 transition ring-1 ring-gray-200/50 dark:ring-gray-700/50 shadow cursor-pointer flex flex-col gap-4 items-start group md:-m-5 hover:shadow-lg duration-500 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                <div class="rounded-lg p-8 bg-gray-50 dark:bg-gray-800 transition ring-1 ring-gray-200/50 dark:ring-gray-700/50 shadow cursor-pointer flex flex-col gap-4 items-start group md:-m-5 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
                     <div class="flex flex-col flex-grow">
                         <div>
                             <h3 class="font-semibold text-lg dark:text-white">

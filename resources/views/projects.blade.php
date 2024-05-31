@@ -9,7 +9,7 @@
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
 
             <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-500 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
                     <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
                     <div class="my-5">
                         <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
@@ -26,7 +26,7 @@
             </a>
             
             <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-500 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
                     <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
                     <div class="my-5">
                         <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
@@ -43,7 +43,7 @@
             </a>
 
             <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-500 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
                     <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
                     <div class="my-5">
                         <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
@@ -60,7 +60,7 @@
             </a>
 
             <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-500 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
                     <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
                     <div class="my-5">
                         <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
