@@ -20,6 +20,12 @@ export default {
     },
 
     
+    // require('@tailwindcss/typography'),
 
-    plugins: [forms],
+    // plugins: [forms],
+    plugins: 
+    [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+    ],
 };

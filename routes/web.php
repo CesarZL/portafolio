@@ -34,6 +34,10 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('/project', function () {
+    return view('projects.blog');
+})->name('contact');
+
 Route::post('/contact', function(Request $request){
     $request->validate([
         'name' => 'required',

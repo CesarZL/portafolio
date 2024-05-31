@@ -218,7 +218,7 @@
         <div class="py-6 px-10 border-t border-gray-200 dark:border-gray-600">
             <div class="flex items-center justify-between">
                 <label for="theme" class="text-slate-700 dark:text-slate-400 font-medium">Cambiar tema</label>
-                <button type="button" id="theme-toggle-mobile" class="px-4 relative flex items-center ring-1 ring-slate-900/10 rounded-lg shadow-sm p-2 text-slate-700 font-semibold dark:bg-slate-600 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
+                <button type="button" id="theme-toggle-mobile" class="w-32 px-4 relative flex items-center ring-1 ring-slate-900/10 rounded-lg shadow-sm p-2 text-slate-700 font-semibold dark:bg-slate-600 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-2 dark:hidden">
                         <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-purple-300/20 stroke-purple-400"></path>
                         <path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-purple-400"></path>
@@ -237,13 +237,14 @@
         <div class="py-6 px-10 border-t border-gray-200 dark:border-gray-600">
             <div class="flex items-center justify-between">
                 <label for="theme" class="text-slate-700 font-medium dark:text-slate-400">Cambiar idioma</label>
-                <div class="px-4 py-2 relative flex items-center ring-1 ring-slate-900/10 rounded-lg shadow-sm text-slate-700 font-semibold dark:bg-slate-600 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
+                <div class="w-32 px-4 py-2 relative flex items-center ring-1 ring-slate-900/10 rounded-lg shadow-sm text-slate-700 font-semibold dark:bg-slate-600 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
                     <x-dropdown-theme align="right">
                         <x-slot name="trigger">
                             <button type="button" id="headlessui-listbox-button-:R5beilb6:" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="" aria-labelledby="headlessui-label-:R3beilb6: headlessui-listbox-button-:R5beilb6:" class="flex items-center">
-                                <a class=" text-slate-700 dark:text-slate-200 px-4">
+                                <a class="ml-2 text-slate-700 dark:text-slate-200">
                                     Español
                                 </a>
+                                <svg class="w-6 h-6 ml-2 text-slate-400" fill="none"><path d="m15 11-3 3-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                             </button>
                         </x-slot>
 
