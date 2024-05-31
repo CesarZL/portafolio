@@ -250,7 +250,7 @@
                         <x-slot name="content">
                             <x-dropdown-link class="p-1 px-4 border border-gray-200 dark:border-gray-600 rounded-lg">
                                 <div class="py-1 px-2 flex items-center cursor-pointer ">
-                                Español
+                                Españolo
                                 </div>
                             </x-dropdown-link>
 
