@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="sticky top-0 z-40 transition-all sticky-header" active="">
+<nav x-data="{ open: false }" class="py-3 sticky top-0 z-40 transition-all sticky-header" active="">
     <!-- Primary Navigation Menu -->
     <div class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -42,7 +42,7 @@
                     </x-nav-link>
                     @endauth
 
-                    <div class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
+                    <div class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-purple-800">
                         {{-- Dropdown Theme --}}
                         <x-dropdown-theme align="right">
                             <x-slot name="trigger">
