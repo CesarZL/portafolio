@@ -1,35 +1,33 @@
 <x-app-layout>
-    <div class="overflow-x-clip">
-        <div class="max-w-screen-xl mx-auto px-5">
-            <div class="grid lg:grid-cols-5 place-items-center relative">
-                <div class="absolute w-96 h-96 blur-3xl z-20 bg-gradient-radial from-indigo-200 dark:from-indigo-800 right-0 top-0"></div>
-                <div class="absolute w-96 h-96 blur-3xl z-20 bg-gradient-radial from-purple-200 dark:from-purple-800 right-56 top-10"></div>
-                <div class="max-w-sm md:max-w-max lg:col-span-2 z-30">
-                    <h2
-                        class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start dark:text-white">
-                        Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-400">César Zavala López</span> </h2>
-                    <p class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start dark:text-white">
-                        Soy Ingeniero en TI. Me especializo en el desarrollo de aplicaciones web y el diseño de
-                        interfaces y experiencias de usuario. Mi enfoque se centra en crear soluciones prácticas y
-                        eficientes.
-                    </p>
-                    <div class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-                        <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-7 py-2.5 bg-white border-2 border-purple-500 hover:bg-purple-50 text-purple-600  flex gap-1 items-center justify-center transition duration-300 ease-out"
-                            href="{{route('about')}}">
-                            Conoce más
-                        </a>
+    <div class="max-w-screen-xl mx-auto px-5">
+        <div class="grid lg:grid-cols-5 place-items-center relative">
+            <div class="absolute w-96 h-96 blur-3xl z-20 bg-gradient-radial from-indigo-200 dark:from-indigo-800 right-0 top-0"></div>
+            <div class="absolute w-96 h-96 blur-3xl z-20 bg-gradient-radial from-purple-200 dark:from-purple-800 right-56 top-10"></div>
+            <div class="max-w-sm md:max-w-max lg:col-span-2 z-30">
+                <h2
+                    class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start dark:text-white">
+                    Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-400">César Zavala López</span> </h2>
+                <p class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start dark:text-white">
+                    Soy Ingeniero en TI. Me especializo en el desarrollo de aplicaciones web y el diseño de
+                    interfaces y experiencias de usuario. Mi enfoque se centra en crear soluciones prácticas y
+                    eficientes.
+                </p>
+                <div class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+                    <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-white border-2 border-purple-500 hover:bg-purple-50 text-purple-600  flex gap-1 items-center justify-center transition duration-300 ease-out"
+                        href="{{route('about')}}">
+                        Conoce más
+                    </a>
 
-                        <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-7 py-2.5 bg-purple-600 text-white hover:bg-purple-800 flex gap-1 items-center justify-center transition duration-300 ease-out"
-                            href="{{route('contact')}}">
-                            Contáctame
-                        </a>
-                    </div>
+                    <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-purple-600 text-white hover:bg-purple-800 flex gap-1 items-center justify-center transition duration-300 ease-out"
+                        href="{{route('contact')}}">
+                        Contáctame
+                    </a>
                 </div>
-                <div class="py-3 lg:col-span-3 lg:-mr-44 z-30">
-                    <img src="{{asset('img/yo.jfif')}}" alt="Hero image"
-                        class="lg:my-32 md:my-10 my-12 rounded-xl w-full max-w-md mx-auto shadow-2xl" loading="lazy"
-                        width="1270" height="1652" decoding="async">
-                </div>
+            </div>
+            <div class="py-3 lg:col-span-3 lg:-mr-44 z-30">
+                <img src="{{asset('img/yo.jfif')}}" alt="Hero image"
+                    class="w-5/6 md:w-full md:h-full lg:my-32 md:my-10 my-12 rounded-xl max-w-md mx-auto shadow-2xl" loading="lazy"
+                    width="1270" height="1652" decoding="async">
             </div>
         </div>
     </div>
@@ -131,12 +129,12 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-16 gap-10">
             @for ($i = 0; $i < 3; $i++) 
             <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-xl duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
                     <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
-                    <div class="my-5">
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
+                    <div class="mb-3 mt-3 flex flex-wrap gap-2">
+                        <span class="bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">Front-end</span>
+                        <span class="bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">Front-end</span>
+                        <span class="bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">Front-end</span>
                     </div>
                     <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
                         <span class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300">
@@ -148,9 +146,10 @@
             </a>
             @endfor
         </div>
+        
 
         <div class="flex justify-center items-center mt-10 gap-4">
-            <a class="bg-white px-5 py-2 rounded-md border-2 border-purple-500 text-purple-600 hover:bg-purple-50 transition duration-300 ease-out"
+            <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-white border-2 border-purple-500 hover:bg-purple-50 text-purple-600  flex gap-1 items-center justify-center transition duration-300 ease-out"
                 href="{{ route('projects') }}">
                 Ver más
             </a>
@@ -174,9 +173,9 @@
         </div>
 
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16 md:px-5">
             @for ($i = 0; $i < 6; $i++) 
-                <div class="rounded-lg p-8 bg-gray-50 dark:bg-gray-800 transition ring-1 ring-gray-200/50 dark:ring-gray-700/50 shadow cursor-pointer flex flex-col gap-4 items-start group md:-m-5 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                <div class="rounded-lg p-8 bg-gray-50 dark:bg-gray-800 transition ring-1 ring-gray-200/50 dark:ring-gray-700/50 shadow cursor-pointer flex flex-col gap-4 items-start group md:-m-5 hover:shadow-xl duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
                     <div class="flex flex-col flex-grow">
                         <div>
                             <h3 class="font-semibold text-lg dark:text-white">
@@ -193,7 +192,7 @@
                             </p>
                         </div>
                     </div>
-                    <span class="bg-purple-100 dark:bg-purple-800 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-200 rounded-full text-xs font-medium px-3 py-1 uppercase mb-2">
+                    <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 uppercase mb-2">
                         ENE. 2017 - ENE. 2022
                     </span>
                 </div>

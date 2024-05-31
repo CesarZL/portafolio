@@ -8,73 +8,24 @@
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
 
-            <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
-                    <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
-                    <div class="my-5">
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
-                        <span class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300">
-                            Cómo desplegar rápidamente un sitio web estático
-                        </span>
-                    </h2>
-                    <p class="font-light text-gray-500 dark:text-gray-300">Los sitios web estáticos ahora se utilizan para arrancar muchos sitios web y se están convirtiendo en la base de una variedad de herramientas que incluso influyen tanto en diseñadores web como en desarrolladores.</p>
-                </article>
-            </a>
-            
-            <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
-                    <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
-                    <div class="my-5">
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
-                        <span class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300">
-                            Cómo desplegar rápidamente un sitio web estático
-                        </span>
-                    </h2>
-                    <p class="font-light text-gray-500 dark:text-gray-300">Los sitios web estáticos ahora se utilizan para arrancar muchos sitios web y se están convirtiendo en la base de una variedad de herramientas que incluso influyen tanto en diseñadores web como en desarrolladores.</p>
-                </article>
-            </a>
-
-            <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
-                    <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
-                    <div class="my-5">
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
-                        <span class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300">
-                            Cómo desplegar rápidamente un sitio web estático
-                        </span>
-                    </h2>
-                    <p class="font-light text-gray-500 dark:text-gray-300">Los sitios web estáticos ahora se utilizan para arrancar muchos sitios web y se están convirtiendo en la base de una variedad de herramientas que incluso influyen tanto en diseñadores web como en desarrolladores.</p>
-                </article>
-            </a>
-
-            <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-lg duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
-                    <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
-                    <div class="my-5">
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                        <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1">Front-end</span>
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
-                        <span class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300">
-                            Cómo desplegar rápidamente un sitio web estático
-                        </span>
-                    </h2>
-                    <p class="font-light text-gray-500 dark:text-gray-300">Los sitios web estáticos ahora se utilizan para arrancar muchos sitios web y se están convirtiendo en la base de una variedad de herramientas que incluso influyen tanto en diseñadores web como en desarrolladores.</p>
-                </article>
-            </a>
+            @for ($i = 0; $i < 6; $i++)
+                <a href="{{ route('projects') }}">
+                    <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-xl duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                        <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
+                        <div class="mb-3 mt-3 flex flex-wrap gap-2">
+                            <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">Front-end</span>
+                            <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">Front-end</span>
+                            <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">Front-end</span>
+                        </div>
+                        <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
+                            <span class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300">
+                                Cómo desplegar rápidamente un sitio web estático
+                            </span>
+                        </h2>
+                        <p class="font-light text-gray-500 dark:text-gray-300">Los sitios web estáticos ahora se utilizan para arrancar muchos sitios web y se están convirtiendo en la base de una variedad de herramientas que incluso influyen tanto en diseñadores web como en desarrolladores.</p>
+                    </article>
+                </a>
+            @endfor
                     
         </div>  
     </div>

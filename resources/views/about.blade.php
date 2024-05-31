@@ -19,7 +19,7 @@
 
 
         <div class="mt-6 text-center">
-            <a class=" gap-3 inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition duration-300 ease-in-out"
+            <a class=" gap-3 inline-flex rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-purple-600 text-white hover:bg-purple-800 items-center justify-center transition duration-300 ease-out"
                 href="{{route('download')}}">
                 <svg viewBox="0 0 24 24" class="text-white w-5 h-5" astro-icon="bx:bxs-cloud-download">
                     <path fill="currentColor"
@@ -45,19 +45,19 @@
                 </div>
         
                 <div class="flex gap-x-8 gap-y-4 md:gap-20 lg:gap-28 items-center justify-center mt-8 flex-wrap">
-                    <a href="https://www.credly.com/badges/3be95b04-dcff-4c52-ae93-b721f3111d29" target="_blank" class="cursor-pointer duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800 rounded-2xl hover:shadow-lg p-2">
+                    <a href="https://www.credly.com/badges/3be95b04-dcff-4c52-ae93-b721f3111d29" target="_blank" class="cursor-pointer duration-200 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800 rounded-2xl hover:shadow-lg p-2">
                         <img class="w-32 h-32 md:w-40 md:h-40" src="{{asset('img/certifications/ux.png')}}" alt="Certificado de Diseño de Experiencia del Usuario (UX) de Google">
                     </a>
         
-                    <a href="https://www.credly.com/badges/fa5d9a26-761c-4ae1-8cca-c06048195d23" target="_blank" class="cursor-pointer duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800 rounded-2xl hover:shadow-lg p-2">
+                    <a href="https://www.credly.com/badges/fa5d9a26-761c-4ae1-8cca-c06048195d23" target="_blank" class="cursor-pointer duration-200 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800 rounded-2xl hover:shadow-lg p-2">
                         <img class="w-32 h-32 md:w-40 md:h-40" src="{{asset('img/certifications/ccna.png')}}" alt="CCNA: Switching, Routing, and Wireless Essentials">
                     </a>
         
-                    <a href="https://www.credly.com/badges/bceddad5-d56f-4014-b0f7-e0a257f36843" target="_blank" class="cursor-pointer duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800 rounded-2xl hover:shadow-lg p-2">
+                    <a href="https://www.credly.com/badges/bceddad5-d56f-4014-b0f7-e0a257f36843" target="_blank" class="cursor-pointer duration-200 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800 rounded-2xl hover:shadow-lg p-2">
                         <img class="w-32 h-32 md:w-40 md:h-40" src="{{asset('img/certifications/cs.png')}}" alt="Introduction to Cybersecurity">
                     </a>
         
-                    <a href="https://www.credly.com/badges/09f6daae-885d-4f1b-ad2e-a62711869b8d" target="_blank" class="cursor-pointer duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800 rounded-2xl hover:shadow-lg p-2">
+                    <a href="https://www.credly.com/badges/09f6daae-885d-4f1b-ad2e-a62711869b8d" target="_blank" class="cursor-pointer duration-200 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800 rounded-2xl hover:shadow-lg p-2">
                         <img class="w-32 h-32 md:w-40 md:h-40" src="{{asset('img/certifications/ccna2.png')}}" alt="CCNA: Introduction to Networks">
                     </a>
                 </div>
