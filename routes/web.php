@@ -34,9 +34,9 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/project', function () {
+Route::get('/projects/1', function () {
     return view('projects.blog');
-})->name('contact');
+})->name('projects1');
 
 Route::post('/contact', function(Request $request){
     $request->validate([
