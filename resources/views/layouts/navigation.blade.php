@@ -242,7 +242,7 @@
                         <x-slot name="trigger">
                             <button type="button" id="headlessui-listbox-button-:R5beilb6:" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="" aria-labelledby="headlessui-label-:R3beilb6: headlessui-listbox-button-:R5beilb6:" class="flex items-center">
                                 <a class=" text-slate-700 dark:text-slate-200 px-4">
-                                    Españolo
+                                    Español
                                 </a>
                             </button>
                         </x-slot>
