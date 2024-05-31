@@ -5,10 +5,6 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    {{-- <a href="{{ route('welcome') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a> --}}
-
                     <a href="{{ route('welcome') }}" class="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full px-2 -ml-2">
                         <span><</span><span>César-Zavala/></span>
                     </a>
@@ -46,7 +42,7 @@
                         {{-- Dropdown Theme --}}
                         <x-dropdown-theme align="right">
                             <x-slot name="trigger">
-                                {{-- Boton para cambiar el idioma --}}
+                                {{-- Button to change the language --}}
                                 <button type="button" id="headlessui-listbox-button-:R5beilb6:" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="" aria-labelledby="headlessui-label-:R3beilb6: headlessui-listbox-button-:R5beilb6:" class="flex items-center">
                                     <a class=" text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" class="w-6 h-6">
@@ -71,7 +67,7 @@
                             </x-slot>
                         </x-dropdown-theme>
 
-                        <!-- Botón de cambio de tema para escritorio -->
+                        <!-- Button to change the theme -->
                         <button type="button" class="items-center ml-6 block" id="theme-toggle-desktop">
                             <span class="dark:hidden">
                                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
@@ -219,7 +215,6 @@
             </div>
         @endauth
 
-        <!-- Sección para el menú responsive en móvil -->
         <div class="py-6 px-10 border-t border-gray-200 dark:border-gray-600">
             <div class="flex items-center justify-between">
                 <label for="theme" class="text-slate-700 dark:text-slate-400 font-medium">Cambiar tema</label>
@@ -243,24 +238,10 @@
             <div class="flex items-center justify-between">
                 <label for="theme" class="text-slate-700 font-medium dark:text-slate-400">Cambiar idioma</label>
                 <div class="px-4 py-2 relative flex items-center ring-1 ring-slate-900/10 rounded-lg shadow-sm text-slate-700 font-semibold dark:bg-slate-600 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
-                        {{-- Español
-                        <svg class="w-6 h-6 text-slate-400" fill="none">
-                            <path d="m15 11-3 3-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-
-                    <select id="theme" class="absolute appearance-none inset-0 w-full h-full opacity-0 dark:text-black">
-                        <option value="1">Español</option>
-                        <option value="2">English</option>
-                    </select> --}}
-
                     <x-dropdown-theme align="right">
                         <x-slot name="trigger">
-                            {{-- Boton para cambiar el idioma --}}
                             <button type="button" id="headlessui-listbox-button-:R5beilb6:" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="" aria-labelledby="headlessui-label-:R3beilb6: headlessui-listbox-button-:R5beilb6:" class="flex items-center">
                                 <a class=" text-slate-700 dark:text-slate-200 px-4">
-                                    {{-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
-                                    </svg> --}}
                                     Español
                                 </a>
                             </button>
