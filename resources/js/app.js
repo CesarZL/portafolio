@@ -1,8 +1,8 @@
 import './bootstrap';
 
-import './navbar.js';
-
 import './theme-mode.js';
+
+import './navbar.js';
 
 import Alpine from 'alpinejs';
 

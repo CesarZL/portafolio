@@ -1,6 +1,6 @@
 const scrollY = 20;
 const defaultClass = "border-transparent";
-const activeClass = "bg-white/80 dark:bg-black/60 border-gray-200 dark:border-gray-700 backdrop-blur-lg";
+const activeClass = "bg-gray-900/80 border-gray-200 dark:border-gray-700 backdrop-blur-lg";
 
 let scrollPos = 0;
 let ticking = false;
@@ -39,3 +39,4 @@ document.addEventListener("scroll", (event) => {
         ticking = true;
     }
 });
+
