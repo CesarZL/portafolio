@@ -1,7 +1,4 @@
 <nav x-data="{ open: false }" class="sticky top-0 z-40 transition-all sticky-header" active="">
-<div class="dark:bg-gray-900/80" hidden>
-
-</div>
     <!-- Primary Navigation Menu -->
     <div class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         <div class="flex justify-between h-16">
