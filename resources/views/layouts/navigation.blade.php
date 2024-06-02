@@ -16,6 +16,13 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 md:-my-px md:ms-10 md:flex me-3">
+
+                    @auth
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-nav-link>
+                    @endauth
+
                     <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
                         {{ __('Inicio') }}
                     </x-nav-link>
@@ -24,18 +31,18 @@
                         {{ __('Sobre mí') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
-                        {{ __('Mis proyectos') }}
+                    <x-nav-link :href="route('projects.index')" :active="request()->routeIs('projects.index') || request()->routeIs('projects.show')">
+                        {{ __('Proyectos') }}
                     </x-nav-link>
-
+                        
                     <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                         {{ __('Contacto') }}
                     </x-nav-link>
 
                     @auth
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+                       <x-nav-link :href="route('projects.create')" :active="request()->routeIs('projects.create')">
+                            {{ __('Crear proyecto') }}
+                        </x-nav-link>
                     @endauth
 
                     <div class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-purple-800">
@@ -163,6 +170,11 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('projects.create')" :active="request()->routeIs('projects.create')">
+                {{ __('Crear proyecto') }}
+            </x-responsive-nav-link>
+
             @endauth
 
             <x-responsive-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
@@ -173,7 +185,7 @@
                 {{ __('Sobre mí')}}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
+            <x-responsive-nav-link :href="route('projects.index')" :active="request()->routeIs('projects.index') || request()->routeIs('projects.show')">
                 {{ __('Mis proyectos')}}
             </x-responsive-nav-link>
 
@@ -199,6 +211,8 @@
                         {{ Auth::user()->unreadNotifications->count() }} @choice('notificación|notificaciones',
                         Auth::user()->unreadNotifications->count())
                     </x-responsive-nav-link>
+
+
 
                     <!-- Authentication -->
                     <form method="POST" action="{{ route('logout') }}">

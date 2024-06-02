@@ -194,6 +194,16 @@ return [
         'message' => 'mensaje',
         'password' => 'contraseña',
         'password_confirmation' => 'confirmación de la contraseña',
+        'title' => 'título',
+        'title_en' => 'título en inglés',
+        'image' => 'imagen',
+        'content' => 'contenido',
+        'content_en' => 'contenido en inglés',
+        'principal_category' => 'categoría principal',
+        'categories' => 'categorías',
+        'abstract' => 'resumen',
+        'abstract_en' => 'resumen en inglés',
+        
 
     ],
 

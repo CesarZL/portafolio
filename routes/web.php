@@ -1,17 +1,19 @@
 <?php
 
 use App\Models\User;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Notifications\MensajesPortafolio;
+use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Notification;
 use App\Http\Controllers\NotificationController;
 
-
-
 Route::get('/', function () {
-    return view('home');
+    $projects = Project::inRandomOrder()->take(3)->get();
+    return view('home', compact('projects'));
 })->name('welcome');
 
 Route::get('/about', function () {
@@ -26,17 +28,15 @@ Route::get('/download',  function(){
     return response()->download($file, 'cv-cesarzavala.pdf', $headers);
 })->name('download');
 
-Route::get('/projects', function () {
-    return view('projects');
-})->name('projects');
-
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/projects/1', function () {
-    return view('projects.blog');
-})->name('projects1');
+Route::get('/projects', [ProjectsController::class, 'index'])->name('projects.index');
+
+Route::get('/projects/{id}', [ProjectsController::class, 'show'])->name('projects.show');
+
+
 
 Route::post('/contact', function(Request $request){
     $request->validate([
@@ -58,7 +58,13 @@ Route::post('/contact', function(Request $request){
 
 
 Route::middleware('rol.admin')->group(function () {
-   
+
+    Route::get('/project/create', [ProjectsController::class, 'create'])->name('projects.create');
+    Route::post('project/create' , [ProjectsController::class, 'store'])->name('projects.store');
+    Route::get('/project/{id}/edit', [ProjectsController::class, 'edit'])->name('projects.edit');
+    Route::put('/project/{id}/edit', [ProjectsController::class, 'update'])->name('projects.update');
+    Route::delete('/project/{id}', [ProjectsController::class, 'destroy'])->name('projects.destroy');
+
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

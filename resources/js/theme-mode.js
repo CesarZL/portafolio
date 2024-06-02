@@ -13,9 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (localStorage.getItem('color-theme') === 'dark') {
             document.documentElement.classList.remove('dark');
             localStorage.setItem('color-theme', 'light');
+            document.dispatchEvent(new CustomEvent('theme-changed', { detail: { theme: 'light' } }));
         } else {
             document.documentElement.classList.add('dark');
             localStorage.setItem('color-theme', 'dark');
+            document.dispatchEvent(new CustomEvent('theme-changed', { detail: { theme: 'dark' } }));
         }
     }
 
@@ -24,4 +26,3 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', toggleTheme);
     });
 });
-

@@ -115,7 +115,7 @@
         </div>
     </div>
 
-    <div class="max-w-screen-xl mx-auto px-5 mb-20">
+    <div class="max-w-screen-xl mx-auto px-5 mb-20 {{ $projects->isEmpty() ? 'hidden' : '' }}">
         <div class="mt-24">
             <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight dark:text-white">
                 Estos son algunos de <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600"> mis proyectos</span>
@@ -127,30 +127,55 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-16 gap-10">
-            @for ($i = 0; $i < 3; $i++) 
-            <a href="{{ route('projects') }}">
-                <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-xl duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
-                    <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('img/blog/1.jpeg') }}" alt="Blog Image">
-                    <div class="mb-3 mt-3 flex flex-wrap gap-2">
-                        <span class="bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">Front-end</span>
-                        <span class="bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">Front-end</span>
-                        <span class="bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">Front-end</span>
+            @foreach ($projects as $project)
+            <div>
+                <a href="{{ route('projects.show', $project) }}">
+                    <article class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-xl duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                        <img class="mb-5 w-full h-48 object-cover rounded-lg" src="{{ asset('storage/' . $project->image) }}" alt="Blog Image">
+                        <div class="mb-3 mt-3 flex flex-wrap gap-2">
+                            <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">{{ $project->category->name }}</span>
+                            @foreach ($project->categories as $category)
+                                <span class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 whitespace-nowrap mb-1">{{ $category->name }}</span>
+                            @endforeach
+                        </div>
+                        <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
+                            <span class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300">
+                                {{ $project->title }}
+                            </span>
+                        </h2>
+                        <p class="font-light text-gray-500 dark:text-gray-300">
+                            {{$project->abstract }}
+                        </p>
+                    </article>
+                </a>
+
+                @auth
+                    <div class="text-center mt-5"> 
+                        <a class="rounded-lg text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple py-2 bg-purple-600 text-white hover:bg-purple-800 flex gap-1 items-center justify-center transition duration-300 ease-out"
+                            href="{{route('projects.edit', $project)}}">
+                            Editar proyecto
+                        </a>
                     </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
-                        <span class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300">
-                            Cómo desplegar rápidamente un sitio web estático
-                        </span>
-                    </h2>
-                    <p class="font-light text-gray-500 dark:text-gray-300">Los sitios web estáticos ahora se utilizan para arrancar muchos sitios web y se están convirtiendo en la base de una variedad de herramientas que incluso influyen tanto en diseñadores web como en desarrolladores.</p>
-                </article>
-            </a>
-            @endfor
+
+                    <div class="text-center mt-2"> 
+                        <form action="{{ route('projects.destroy', $project) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="w-full rounded-lg text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 focus-visible:outline-none focus-visible:shadow-outline-red py-2 bg-red-600 text-white hover:bg-red-800 flex gap-1 items-center justify-center transition duration-300 ease-out"
+                                type="submit">
+                                Eliminar proyecto
+                            </button>
+                        </form>
+                    </div>
+                @endauth
+            </div>
+            @endforeach
         </div>
         
 
         <div class="flex justify-center items-center mt-10 gap-4">
             <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-white border-2 border-purple-500 hover:bg-purple-50 text-purple-600  flex gap-1 items-center justify-center transition duration-300 ease-out"
-                href="{{ route('projects') }}">
+                href="{{ route('projects.index') }}">
                 Ver más
             </a>
         </div>

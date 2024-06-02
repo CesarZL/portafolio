@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Categoria;
+use App\Models\Category;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -22,5 +24,13 @@ class DatabaseSeeder extends Seeder
             'rol' => '1',
             'password' => Hash::make('password'),
         ]);
+
+        Category::create(['name' => 'Desarrollo Web', 'name_en' => 'Web Development']);
+        Category::create(['name' => 'UX/UI', 'name_en' => 'UX/UI']);
+        Category::create(['name' => 'IA', 'name_en' => 'AI']);
+        // Category::create(['name' => 'DevOps', 'name_en' => 'DevOps']);
+        Category::create(['name' => 'IoT', 'name_en' => 'IoT']);
+        Category::create(['name' => 'Diseño', 'name_en' => 'Design']);
+        Category::create(['name' => 'Marketing', 'name_en' => 'Marketing']);
     }
 }

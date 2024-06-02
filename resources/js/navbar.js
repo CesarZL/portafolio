@@ -1,4 +1,4 @@
-const scrollY = 50;
+const scrollY = 60;
 const defaultClass = "py-3 border-transparent";
 const activeClass = "bg-white/80 dark:bg-gray-900/80 border-gray-200 dark:border-gray-700 backdrop-blur-lg";
 
@@ -17,7 +17,7 @@ function OnScroll(scrollPos) {
             header.setAttribute("active", "");
         }
 
-        if (scrollPos < Math.max(scrollY - 20, 0)) {
+        if (scrollPos < Math.max(scrollY - 25, 0)) {
             header.classList.remove("is-active", ...classArray);
             header.classList.add(...replaceArray);
             header.removeAttribute("active");

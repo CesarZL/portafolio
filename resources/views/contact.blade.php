@@ -8,6 +8,7 @@
                 Envía un mensaje y te responderé lo antes posible.
             </p>
         </div>
+
         <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
             <div>
                 <h2 class="font-medium text-2xl text-gray-800 dark:text-white">
@@ -50,22 +51,22 @@
                     @csrf
                     <div class="mb-5">
                         <x-input-label for="name" :value="__('Nombre')" />
-                        <x-text-input id="name" name="name" type="text" class="mt-1 block w-full text-sm"
-                            :value="old('name')" required autofocus />
+                        <x-text-input id="name" name="name" type="text" class="mt-1 block w-full"
+                            :value="old('name')" required autofocus placeholder="¿Cómo te llamas?" />
                         <x-input-error class="mt-2" :messages="$errors->get('name')" />
                     </div>
 
                     <div class="mb-5">
                         <x-input-label for="email" :value="__('Correo electrónico')" />
-                        <x-text-input id="email" name="email" type="email" class="mt-1 block w-full text-sm"
-                            :value="old('email')" required />
+                        <x-text-input id="email" name="email" type="email" class="mt-1 block w-full"
+                            :value="old('email')" required placeholder="Déjame tu correo para poder responderte" />
                         <x-input-error class="mt-2" :messages="$errors->get('email')" />
                     </div>
 
                     <div class="mb-3">
                         <x-input-label for="message" :value="__('Mensaje')" />
-                        <textarea placeholder="Tu Mensaje"
-                            class="text-sm border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-purple-500 dark:focus:border-purple-600 focus:ring-purple-500 dark:focus:ring-purple-600 rounded-md shadow-sm mt-1 block w-full"
+                        <textarea placeholder="¿Sobre qué quieres hablar? ¡Cuéntame!"
+                            class="text-sm border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-purple-500 dark:focus:border-purple-600 focus:ring-purple-500 dark:focus:ring-purple-600 rounded-md shadow-sm placeholder-gray-400 dark:placeholder-gray-500 mt-1 block w-full"
                             name="message"></textarea>
 
                         <x-input-error class="mt-2" :messages="$errors->get('message')" />

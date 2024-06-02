@@ -30,4 +30,12 @@ class NotificationController extends Controller
             'read_notifications' => $read_notifications
         ]);
     }
+
+    public function delete($id)
+    {
+        // Eliminar la notificación
+        Auth::user()->notifications()->where('id', $id)->delete();
+
+        return redirect()->route('notifications.index');
+    }
 }
