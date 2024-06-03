@@ -65,4 +65,7 @@ return [
     'edit_project' => 'Edit project',
     'delete_project' => 'Delete project',
     'back_projects' => 'Back to projects',
+    'name' => 'Name',
+    'email' => 'Email',
+    'message' => 'Message',
 ];

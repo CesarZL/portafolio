@@ -54,7 +54,7 @@
                 <form action="{{ route('contact.send') }}" method="POST" novalidate>
                     @csrf
                     <div class="mb-5">
-                        <x-input-label for="name" :value="__('Nombre')" />
+                        <x-input-label for="name" :value="__('messages.name')" />
                         <x-text-input id="name" name="name" type="text" class="mt-1 block w-full"
                             {{-- :value="old('name')" required autofocus placeholder="¿Cómo te llamas?" /> --}}
                             :value="old('name')" required placeholder="{{ __('messages.name_placeholder') }}" />
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="mb-5">
-                        <x-input-label for="email" :value="__('Correo electrónico')" />
+                        <x-input-label for="email" :value="__('messages.email')" />
                         <x-text-input id="email" name="email" type="email" class="mt-1 block w-full"
                             {{-- :value="old('email')" required placeholder="Déjame tu correo para poder responderte" /> --}}
                             :value="old('email')" required placeholder="{{__('messages.email_placeholder') }}" />
@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <x-input-label for="message" :value="__('Mensaje')" />
+                        <x-input-label for="message" :value="__('messages.message')" />
                         {{-- <textarea placeholder="¿En qué puedo ayudarte? Cuéntame" id="message"  --}}
                         <textarea placeholder="{{ __('messages.message_placeholder') }}" id="message"
                             class="text-sm border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-purple-500 dark:focus:border-purple-600 focus:ring-purple-500 dark:focus:ring-purple-600 rounded-md shadow-sm placeholder-gray-400 dark:placeholder-gray-500 mt-1 block w-full"
