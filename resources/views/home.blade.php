@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="max-w-screen-xl mx-auto px-5">
-        <div class="grid lg:grid-cols-5 place-items-center relative">
+        <div class="grid mt-24 lg:mt-0 lg:grid-cols-5 place-items-center relative">
             <div
                 class="absolute w-96 h-96 blur-3xl z-20 bg-gradient-radial from-indigo-200 dark:from-indigo-800 right-0 top-0">
             </div>
