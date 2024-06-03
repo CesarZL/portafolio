@@ -10,24 +10,25 @@
             <div class="max-w-sm md:max-w-max lg:col-span-2 z-30">
                 <h2
                     class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start dark:text-white">
-                    Hola, soy <span
+                    @lang('messages.hello')
+                    <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-400">César
-                        Zavala López</span> </h2>
+                        Zavala López
+                    </span> 
+                </h2>
                 <p
                     class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start dark:text-white">
-                    Soy ingeniero en TI y desarrollador web originario de Tamaulipas, México. Me especializo en
-                    aplicaciones web, y en diseño de interfaces y experiencia de usuario. Mi objetivo
-                    es crear soluciones digitales intuitivas y efectivas. 🚀
+                    @lang('messages.bio')
                 </p>
                 <div class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
                     <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-white border-2 border-purple-500 hover:bg-purple-50 text-purple-600  flex gap-1 items-center justify-center transition duration-300 ease-out"
                         href="{{route('about')}}">
-                        Conoce más
+                        @lang('messages.about')
                     </a>
 
                     <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-purple-600 text-white hover:bg-purple-800 flex gap-1 items-center justify-center transition duration-300 ease-out"
                         href="{{route('contact')}}">
-                        Contáctame
+                        @lang('messages.contact')
                     </a>
                 </div>
             </div>
@@ -39,10 +40,9 @@
         </div>
     </div>
 
-
     <div class="max-w-screen-xl mx-auto px-5">
         <h2 class="text-center text-slate-500 dark:text-white">
-            Conocimiento y experiencia en las siguientes tecnologías y herramientas
+            @lang('messages.tech_experience')
         </h2>
         <div class="flex gap-x-8 gap-y-4 md:gap-20 lg:gap-28 items-center justify-center mt-6 flex-wrap">
 
@@ -125,14 +125,11 @@
     <div class="max-w-screen-xl mx-auto px-5 {{ $projects->isEmpty() ? 'hidden' : '' }}">
         <div class="mt-24 max-w-3xl mx-auto">
             <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center dark:text-white">
-                Explora algunos de <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600"> mis
-                    proyectos</span>
+                @lang('messages.explore_projects') <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600"> @lang('messages.my_projects')</span>
             </h2>
             <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty] dark:text-white">
-                En esta sección, te invito a descubrir una muestra representativa de los proyectos en los que he estado
-                involucrado, tanto en el ámbito profesional como en mi tiempo libre. Cada uno de ellos ofrece una
-                perspectiva única de mi trabajo y habilidades. 🔍✨
+                @lang('messages.project_intro')
             </p>
         </div>
 
@@ -151,7 +148,11 @@
                                         d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z">
                                     </path>
                                 </svg>
-                                {{ $project->category->name}}
+                                @if (app()->getLocale() == 'en')
+                                {{ $project->category->name_en }}
+                                @else
+                                {{ $project->category->name }}
+                                @endif
                             </span>
                         </div>
                         <img class="mb-5 w-full h-48 object-cover rounded-lg"
@@ -159,11 +160,19 @@
                         <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
                             <span
                                 class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300">
+                                @if (app()->getLocale() == 'en')
+                                {{ $project->title_en }}
+                                @else
                                 {{ $project->title }}
+                                @endif
                             </span>
                         </h2>
                         <p class="font-light text-gray-500 dark:text-gray-300">
-                            {{ Str::words($project->abstract, 35) }}
+                            @if (app()->getLocale() == 'en')
+                            {{ $project->abstract_en }}
+                            @else
+                            {{ $project->abstract }}
+                            @endif
                         </p>
                     </article>
                 </a>
@@ -172,7 +181,7 @@
                 <div class="text-center mt-5">
                     <a class="rounded-lg text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple py-2 bg-purple-600 text-white hover:bg-purple-800 flex gap-1 items-center justify-center transition duration-300 ease-out"
                         href="{{route('projects.edit', $project)}}">
-                        Editar proyecto
+                        @lang('messages.edit_project')
                     </a>
                 </div>
 
@@ -196,7 +205,7 @@
         <div class="flex justify-center items-center mt-10 gap-4">
             <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-white border-2 border-purple-500 hover:bg-purple-50 text-purple-600  flex gap-1 items-center justify-center transition duration-300 ease-out"
                 href="{{ route('projects.index') }}">
-                Ver más
+                @lang('messages.see_more')
             </a>
         </div>
     </div>
@@ -205,13 +214,12 @@
     <div class="max-w-screen-xl mx-auto px-5">
         <div class="mt-24 max-w-3xl mx-auto">
             <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center dark:text-white">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Experiencia
-                    laboral</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
+                    @lang('messages.work_experience')
+                </span>
             </h2>
             <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty] dark:text-white">
-                A lo largo de mi carrera, he colaborado con diversas empresas y organizaciones, desempeñando roles que
-                me han permitido desarrollar y perfeccionar mis habilidades profesionales.
-                A continuación, te presento una selección de mis experiencias laborales más destacadas.📊💼
+                @lang('messages.work_experience_intro')
             </p>
         </div>
 
@@ -223,7 +231,8 @@
                 <div class="flex flex-col flex-grow">
                     <div>
                         <h3 class="font-semibold text-lg dark:text-white">
-                            Voluntariado
+                            {{-- Voluntariado --}}
+                            @lang('messages.volunteer')
                         </h3>
 
                         <h2 class="text-slate-500 dark:text-slate-300 font-semibold">
@@ -231,14 +240,16 @@
                         </h2>
 
                         <p class="text-slate-500 dark:text-slate-300 mt-2 leading-relaxed mb-2">
-                            Diseño de base de datos y sistema de captura de entrega de donaciones de medicamentos
-                            realizado en Visual Basic.
+                            {{-- Diseño de base de datos y sistema de captura de entrega de donaciones de medicamentos
+                            realizado en Visual Basic. --}}
+                            @lang('messages.volunteer_description')
                         </p>
                     </div>
                 </div>
                 <span
                     class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 uppercase mb-2">
-                    ENE. 2017 - ENE. 2022
+                    {{-- ENE. 2017 - ENE. 2022 --}}
+                    @lang('messages.cachito_date')
                 </span>
             </div>
 
@@ -247,7 +258,8 @@
                 <div class="flex flex-col flex-grow">
                     <div>
                         <h3 class="font-semibold text-lg dark:text-white">
-                            Dessarrollador
+                            {{-- Dessarrollador --}}
+                            @lang('messages.developer')
                         </h3>
 
                         <h2 class="text-slate-500 dark:text-slate-300 font-semibold">
@@ -255,14 +267,16 @@
                         </h2>
 
                         <p class="text-slate-500 dark:text-slate-300 mt-2 leading-relaxed mb-2">
-                            Diseño y desarrollo de una aplicación .NET programada en Visual Basic para el registro de
-                            asistencia mediante códigos QR.
+                            {{-- Diseño y desarrollo de una aplicación .NET programada en Visual Basic para el registro de
+                            asistencia mediante códigos QR. --}}
+                            @lang('messages.itace_description')
                         </p>
                     </div>
                 </div>
                 <span
                     class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 uppercase mb-2">
-                    FEB. 2020 - MAR. 2020
+                    {{-- FEB. 2020 - MAR. 2020 --}}
+                    @lang('messages.itace_date')
                 </span>
             </div>
 
@@ -271,7 +285,8 @@
                 <div class="flex flex-col flex-grow">
                     <div>
                         <h3 class="font-semibold text-lg dark:text-white">
-                            Dessarrollador Back-End
+                            {{-- Dessarrollador Back-End --}}
+                            @lang('messages.backend_developer')
                         </h3>
 
                         <h2 class="text-slate-500 dark:text-slate-300 font-semibold">
@@ -279,14 +294,16 @@
                         </h2>
 
                         <p class="text-slate-500 dark:text-slate-300 mt-2 leading-relaxed mb-2">
-                            Diseño, desarrollo e implementación de una aplicación .NET programada en C# para el control
-                            de procesos de venta (POS).
+                            {{-- Diseño, desarrollo e implementación de una aplicación .NET programada en C# para el control
+                            de procesos de venta (POS). --}}
+                            @lang('messages.cactu_description')
                         </p>
                     </div>
                 </div>
                 <span
                     class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 uppercase mb-2">
-                    MAR. 2022 - ABR. 2022
+                    {{-- MAR. 2022 - ABR. 2022 --}}
+                    @lang('messages.cactu_date')
                 </span>
             </div>
 
@@ -295,7 +312,8 @@
                 <div class="flex flex-col flex-grow">
                     <div>
                         <h3 class="font-semibold text-lg dark:text-white">
-                            Desarrollador Front-End
+                            {{-- Desarrollador Front-End --}}
+                            @lang('messages.frontend_developer')
                         </h3>
 
                         <h2 class="text-slate-500 dark:text-slate-300 font-semibold">
@@ -303,14 +321,16 @@
                         </h2>
 
                         <p class="text-slate-500 dark:text-slate-300 mt-2 leading-relaxed mb-2">
-                            Contribución a la actualización de la interfaz de la aplicación web LEADS, utilizando
-                            tecnologías como Bootstrap 5, Datatables y Google Charts.
+                            {{-- Contribución a la actualización de la interfaz de la aplicación web LEADS, utilizando
+                            tecnologías como Bootstrap 5, Datatables y Google Charts. --}}
+                            @lang('messages.svam_description')
                         </p>
                     </div>
                 </div>
                 <span
                     class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 uppercase mb-2">
-                    ENE. 2022 - FEB. 2022
+                    {{-- ENE. 2022 - FEB. 2022 --}}
+                    @lang('messages.svam_date')
                 </span>
             </div>
 
@@ -319,7 +339,8 @@
                 <div class="flex flex-col flex-grow">
                     <div>
                         <h3 class="font-semibold text-lg dark:text-white">
-                            Desarrollador
+                            {{-- Desarrollador --}}
+                            @lang('messages.developer')
                         </h3>
 
                         <h2 class="text-slate-500 dark:text-slate-300 font-semibold">
@@ -327,14 +348,16 @@
                         </h2>
 
                         <p class="text-slate-500 dark:text-slate-300 mt-2 leading-relaxed mb-2">
-                            Diseño y desarrollo de una aplicación en LARAVEL y FLASK en conjunto con
-                            ARDUINO para el pase de lista con reconocimiento facial a alumnos.
+                            {{-- Diseño y desarrollo de una aplicación en LARAVEL y FLASK en conjunto con
+                            ARDUINO para el pase de lista con reconocimiento facial a alumnos. --}}
+                            @lang('messages.upv_description')
                         </p>
                     </div>
                 </div>
                 <span
                     class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 uppercase mb-2">
-                    SEP. 2023 - DIC. 2023
+                    {{-- SEP. 2023 - DIC. 2023 --}}
+                    @lang('messages.upv_date')
                 </span>
             </div>
 
@@ -344,22 +367,27 @@
             <div class="flex flex-col flex-grow">
                 <div>
                     <h3 class="font-semibold text-lg dark:text-white">
-                        Freelancer
+                        {{-- Freelancer --}}
+                        @lang('messages.freelancer')
                     </h3>
 
                     <h2 class="text-slate-500 dark:text-slate-300 font-semibold">
-                        Autónomo
+                        {{-- Autónomo --}}
+                        @lang('messages.freelancer_name')
+
                     </h2>
 
                     <p class="text-slate-500 dark:text-slate-300 mt-2 leading-relaxed mb-2">
-                        Me desempeño como desarrollador freelancer especializado en la creación de páginas web 
-                        así como en el diseño de interfaces y experiencia de usuario.
+                        {{-- Me desempeño como desarrollador freelancer especializado en la creación de páginas web 
+                        así como en el diseño de interfaces y experiencia de usuario. --}}
+                        @lang('messages.freelancer_description')
                     </p>
                 </div>
             </div>
             <span
                 class="bg-purple-100 dark:bg-purple-100 border-purple-200 dark:border-purple-700 border text-purple-600 dark:text-purple-800 rounded-full text-xs font-medium px-3 py-1 uppercase mb-2">
-                SEP. 2023 - Actualidad
+                {{-- SEP. 2023 - Actualidad --}}
+                @lang('messages.freelancer_date')
             </span>
         </div>
 
@@ -372,41 +400,3 @@
     </div>
 </x-app-layout>
 
-
-{{--
-Puesto - Voluntariado
-Empresa - Un Cachito de Luz A.C.
-Descripcion - Diseño de base datos y sistema de captura de entrega de donaciones de medicamentos realizado en Visual
-Basic.
-Fecha- ENE. 2017 - ENE. 2022
-
-Puesto - Dessarrollador Full-Stack
-Empresa - ITACE
-Descripcion - Diseño y desarrollo de una aplicación .NET programada en Visual Basic que permite el registro de
-asistencia con códigos
-QR y alerta a los tutores de la actividad de entrada y salida del plantel.
-Fecha- FEB. 2020 - MAR. 2020
-
-Puesto - Dessarrollador Back-End
-Empresa - Cactu Nieves
-Descripcion - Diseño, desarrollo e implementación de una aplicación .NET programada en C# que permite el control sobre
-los procesos de
-venta y administración de la empresa.
-Fecha- MAR. 2022 - ABR. 2022
-
-Puesto - Desarrollador Front-End
-Empresa - SVAM international
-Descripcion - Creación y ejecución de la actualización de la interfaz de la aplicación web LEADS, utilizando Bootstrap
-5, incorporando
-Datatables y Google Charts
-Fecha- ENE. 2022 - FEB. 2022
-
-Puesto - Desarrollador Full-Stack
-Empresa - UPV
-Descripcion - Diseño y desarrollo de una aplicación en LARAVEL y FLASK en conjunto con ARDUINO que permite el pase de
-lista con
-reconocimiento facial a alumnos de la Universidad Politécnica de Victoria, en proceso de implementación interno de la
-institución.
-Fecha- SEP. 2023 - DIC. 2023
-
---}}

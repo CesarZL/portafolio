@@ -2,20 +2,24 @@
     <div class="max-w-screen-xl mx-auto px-5">
         <div class="mt-24 text-center">
             <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
-                Contacto
+                {{-- Contacto --}}
+                @lang('messages.contact')
             </h1>
             <p class="text-lg mt-4 text-slate-500 mx-auto max-w-xl dark:text-white">
-                Si deseas ponerte en contacto, no dudes en enviarme un mensaje. Responderé lo antes posible.
+                {{-- Si deseas ponerte en contacto, no dudes en enviarme un mensaje. Responderé lo antes posible. --}}
+                @lang('messages.contact_description')
             </p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-24">
             <div>
                 <h2 class="font-medium text-2xl text-gray-800 dark:text-white">
-                    Contáctame
+                    {{-- Contáctame --}}
+                    @lang('messages.contact_me')
                 </h2>
                 <p class="text-lg leading-relaxed text-slate-500 mt-3 dark:text-white">
-                    ¿Tienes alguna consulta? Estoy aquí para ayudarte. Mándame un correo o llámame y me pondré en contacto contigo.
+                    {{-- ¿Tienes alguna consulta? Estoy aquí para ayudarte. Mándame un correo o llámame y me pondré en contacto contigo. --}}
+                    @lang('messages.contact_me_description')
                 </p>
                 <div class="mt-5">
                     <div class="flex items-center mt-2 space-x-2 text-gray-600 dark:text-gray-400">
@@ -52,20 +56,23 @@
                     <div class="mb-5">
                         <x-input-label for="name" :value="__('Nombre')" />
                         <x-text-input id="name" name="name" type="text" class="mt-1 block w-full"
-                            :value="old('name')" required autofocus placeholder="¿Cómo te llamas?" />
+                            {{-- :value="old('name')" required autofocus placeholder="¿Cómo te llamas?" /> --}}
+                            :value="old('name')" required placeholder="{{ __('messages.name_placeholder') }}" />
                         <x-input-error class="mt-2" :messages="$errors->get('name')" />
                     </div>
 
                     <div class="mb-5">
                         <x-input-label for="email" :value="__('Correo electrónico')" />
                         <x-text-input id="email" name="email" type="email" class="mt-1 block w-full"
-                            :value="old('email')" required placeholder="Déjame tu correo para poder responderte" />
+                            {{-- :value="old('email')" required placeholder="Déjame tu correo para poder responderte" /> --}}
+                            :value="old('email')" required placeholder="{{__('messages.email_placeholder') }}" />
                         <x-input-error class="mt-2" :messages="$errors->get('email')" />
                     </div>
 
                     <div class="mb-3">
                         <x-input-label for="message" :value="__('Mensaje')" />
-                        <textarea placeholder="¿En qué puedo ayudarte? Cuéntame" id="message" 
+                        {{-- <textarea placeholder="¿En qué puedo ayudarte? Cuéntame" id="message"  --}}
+                        <textarea placeholder="{{ __('messages.message_placeholder') }}" id="message"
                             class="text-sm border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-purple-500 dark:focus:border-purple-600 focus:ring-purple-500 dark:focus:ring-purple-600 rounded-md shadow-sm placeholder-gray-400 dark:placeholder-gray-500 mt-1 block w-full"
                             name="message"></textarea>
 
@@ -73,14 +80,16 @@
                     </div>
 
                     <x-primary-button class="mt-3 w-full justify-center">
-                        {{ __('Enviar mensaje') }}
+                        {{-- Enviar mensaje --}}
+                        @lang('messages.send_message')
                     </x-primary-button>
                 </form>
 
                 @if (session('status') === 'message-sent')
                 <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-green-600 dark:text-green-400 w-full text-center mt-7">
-                    {{ __('Mensaje enviado correctamente')}}
+                    {{-- Mensaje enviado correctamente --}}
+                    @lang('messages.message_sent')
                 </p>
                 @endif
             </div>

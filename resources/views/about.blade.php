@@ -4,16 +4,19 @@
         <div class="mt-24 text-center">
             <div class="mb-4">
                 <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1 ">
-                    Acerca de mí
+                    {{-- Acerca de mí --}}
+                    @lang('messages.about_me')
                 </span>
             </div>
             <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight dark:text-white">
-                Soy 
+                {{-- Soy  --}}
+                @lang('messages.i_am')
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-400">César Zavala López</span>
             </h1>
             <p class="text-lg mt-4 text-slate-500 mx-auto max-w-xl dark:text-white">
-                Soy un apasionado egresado de Ingeniería en Tecnologías de la Información de la Universidad Politécnica de
-                Victoria, originario de Cd. Victoria, Tamaulipas, México, con 23 años de edad. 🎓🌎
+                {{-- Soy un apasionado egresado de Ingeniería en Tecnologías de la Información de la Universidad Politécnica de
+                Victoria, originario de Cd. Victoria, Tamaulipas, México, con 23 años de edad. 🎓🌎 --}}
+                @lang('messages.short_about_me_description')
             </p>
 
             <div class="mt-6 text-center">
@@ -25,7 +28,8 @@
                         </path>
                     </svg>
     
-                    Descarga mi CV
+                    {{-- Descarga mi CV --}}
+                    @lang('messages.download_cv')
                 </a>
             </div>
 
@@ -34,11 +38,17 @@
         <div class="mt-24">
             <div class="text-center ">
                 <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight dark:text-white">
-                    Estas son algunas de <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500"> mis certificaciones</span>
+                    {{-- Estas son algunas de  --}}
+                    @lang('messages.these_are_some_of')
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500"> 
+                        {{-- mis certificaciones --}}
+                        @lang('messages.my_certifications')
+                    </span>
                 </h2>
                 <p class="text-lg mt-4 text-slate-600 dark:text-white max-w-3xl mx-auto">
-                    A lo largo de mi carrera profesional he obtenido diversas certificaciones que avalan mis 
-                    conocimientos en diferentes áreas de la tecnología. 📜💻
+                    {{-- A lo largo de mi carrera profesional he obtenido diversas certificaciones que avalan mis 
+                    conocimientos en diferentes áreas de la tecnología. 📜💻 --}}
+                    @lang('messages.my_certifications_description')
                 </p>
         
                 <div class="flex gap-x-8 gap-y-4 md:gap-20 lg:gap-28 items-center justify-center mt-8 flex-wrap">
@@ -69,13 +79,15 @@
             </div>
             <div class="place-self-center">
                 <h2 class="text-5xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 tracking-tight -mt-2 font-bold">
-                    Sobre mí
+                    {{-- Sobre mí --}}
+                    @lang('messages.about_me')
                 </h2>
                 <p class="text-lg max-w-xl mt-4 leading-relaxed text-slate-500 dark:text-white">
-                    Mi especialización se centra en el desarrollo de aplicaciones web, destacándome en el uso de Laravel para
+                    {{-- Mi especialización se centra en el desarrollo de aplicaciones web, destacándome en el uso de Laravel para
                     construir soluciones integrales desde el backend hasta el frontend. Mis proyectos abarcan desde la investigación
                     y desarrollo de la experiencia de usuario hasta la implementación de la aplicación en un entorno de producción.
-                    Disfruto aprender nuevas tecnologías y compartir mis conocimientos con los demás. 🚀📚
+                    Disfruto aprender nuevas tecnologías y compartir mis conocimientos con los demás. 🚀📚 --}}
+                    @lang('messages.long_about_me_description')
                 </p>
                 <ul class="grid mt-6 text-left gap-y-4">
 
@@ -85,7 +97,10 @@
                                 d="M128 24a104 104 0 1 0 104 104A104.2 104.2 0 0 0 128 24zm49.5 85.8-58.6 56a8.1 8.1 0 0 1-5.6 2.2 7.7 7.7 0 0 1-5.5-2.2l-29.3-28a8 8 0 1 1 11-11.6l23.8 22.7 53.2-50.7a8 8 0 0 1 11 11.6z">
                             </path>
                         </svg>
-                        <span class="text-slate-600 dark:text-white">TOEFL (Inglés B2)</span>
+                        <span class="text-slate-600 dark:text-white">
+                            {{-- TOEFL (Inglés B2) --}}
+                            @lang('messages.toefl')
+                        </span>
                     </li>
 
                     <li class="flex items-center gap-3 text-slate-800 dark:text-white">
@@ -94,7 +109,10 @@
                                 d="M128 24a104 104 0 1 0 104 104A104.2 104.2 0 0 0 128 24zm49.5 85.8-58.6 56a8.1 8.1 0 0 1-5.6 2.2 7.7 7.7 0 0 1-5.5-2.2l-29.3-28a8 8 0 1 1 11-11.6l23.8 22.7 53.2-50.7a8 8 0 0 1 11 11.6z">
                             </path>
                         </svg>
-                        <span class="text-slate-600 dark:text-white">Capacidad de adaptación</span>
+                        <span class="text-slate-600 dark:text-white">
+                            {{-- Capacidad de adaptación --}}
+                            @lang('messages.adaptability')
+                        </span>
                     </li>
 
                     <li class="flex items-center gap-3 text-slate-800 dark:text-white">
@@ -103,7 +121,10 @@
                                 d="M128 24a104 104 0 1 0 104 104A104.2 104.2 0 0 0 128 24zm49.5 85.8-58.6 56a8.1 8.1 0 0 1-5.6 2.2 7.7 7.7 0 0 1-5.5-2.2l-29.3-28a8 8 0 1 1 11-11.6l23.8 22.7 53.2-50.7a8 8 0 0 1 11 11.6z">
                             </path>
                         </svg>
-                        <span class="text-slate-600 dark:text-white">Autoaprendizaje</span>
+                        <span class="text-slate-600 dark:text-white">
+                            {{-- Autoaprendizaje --}}
+                            @lang('messages.self_learning')
+                        </span>
                     </li>
 
                     <li class="flex items-center gap-3 text-slate-800 dark:text-white">
@@ -112,7 +133,10 @@
                                 d="M128 24a104 104 0 1 0 104 104A104.2 104.2 0 0 0 128 24zm49.5 85.8-58.6 56a8.1 8.1 0 0 1-5.6 2.2 7.7 7.7 0 0 1-5.5-2.2l-29.3-28a8 8 0 1 1 11-11.6l23.8 22.7 53.2-50.7a8 8 0 0 1 11 11.6z">
                             </path>
                         </svg>
-                        <span class="text-slate-600 dark:text-white">Orientación a resultados</span>
+                        <span class="text-slate-600 dark:text-white">
+                            {{-- Orientación a resultados --}}
+                            @lang('messages.results_orientation')
+                        </span>
                     </li>
 
                     <li class="flex items-center gap-3 text-slate-800 dark:text-white">
@@ -121,7 +145,10 @@
                                 d="M128 24a104 104 0 1 0 104 104A104.2 104.2 0 0 0 128 24zm49.5 85.8-58.6 56a8.1 8.1 0 0 1-5.6 2.2 7.7 7.7 0 0 1-5.5-2.2l-29.3-28a8 8 0 1 1 11-11.6l23.8 22.7 53.2-50.7a8 8 0 0 1 11 11.6z">
                             </path>
                         </svg>
-                        <span class="text-slate-600 dark:text-white">Trabajo en equipo</span>
+                        <span class="text-slate-600 dark:text-white">
+                            {{-- Trabajo en equipo --}}
+                            @lang('messages.team_work')
+                        </span>
                     </li>
 
                     <li class="flex items-center gap-3 text-slate-800 dark:text-white">
@@ -130,7 +157,10 @@
                                 d="M128 24a104 104 0 1 0 104 104A104.2 104.2 0 0 0 128 24zm49.5 85.8-58.6 56a8.1 8.1 0 0 1-5.6 2.2 7.7 7.7 0 0 1-5.5-2.2l-29.3-28a8 8 0 1 1 11-11.6l23.8 22.7 53.2-50.7a8 8 0 0 1 11 11.6z">
                             </path>
                         </svg>
-                        <span class="text-slate-600 dark:text-white">Trabajo bajo presión</span>
+                        <span class="text-slate-600 dark:text-white">
+                            {{-- Trabajo bajo presión --}}
+                            @lang('messages.work_under_pressure')
+                        </span>
                     </li>
 
                 </ul>

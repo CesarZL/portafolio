@@ -24,30 +24,35 @@
                     @endauth
 
                     <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
-                        {{ __('Inicio') }}
+                        {{-- {{ __('Inicio') }} --}}
+                        @lang('messages.home')
                     </x-nav-link>
 
                     <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
-                        {{ __('Sobre mí') }}
+                        {{-- {{ __('Sobre mí') }} --}}
+                        @lang('messages.about')
                     </x-nav-link>
 
                     <x-nav-link :href="route('projects.index')" :active="request()->routeIs('projects.index') || request()->routeIs('projects.show')">
-                        {{ __('Proyectos') }}
+                        {{-- {{ __('Proyectos') }} --}}
+                        @lang('messages.projects')
                     </x-nav-link>
                         
                     <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
-                        {{ __('Contacto') }}
+                        {{-- {{ __('Contacto') }} --}}
+                        @lang('messages.contact')
                     </x-nav-link>
 
                     @auth
                        <x-nav-link :href="route('projects.create')" :active="request()->routeIs('projects.create')">
-                            {{ __('Crear proyecto') }}
+                            {{-- {{ __('Crear proyecto') }} --}}
+                            @lang('messages.create_project')
                         </x-nav-link>
                     @endauth
 
                     <div class="flex items-center border-l border-slate-300 ml-6 pl-6 dark:border-gray-700">
                         {{-- Dropdown language --}}
-                        {{-- <x-dropdown-theme align="right">
+                        <x-dropdown-theme align="right">
                             <x-slot name="trigger">
                                 <button type="button" id="headlessui-listbox-button-:R5beilb6:" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="" aria-labelledby="headlessui-label-:R3beilb6: headlessui-listbox-button-:R5beilb6:" class="flex items-center mr-6">
                                     <a class=" text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">
@@ -59,19 +64,19 @@
                             </x-slot>
     
                             <x-slot name="content">
-                                <x-dropdown-link class="p-1">
+                                <x-dropdown-link class="p-1" :href="route('locale', 'es')">
                                     <div class="py-1 px-2 flex items-center cursor-pointer ">
                                     Español
                                 </div>
                                 </x-dropdown-link>
     
-                                <x-dropdown-link class="p-1">
+                                <x-dropdown-link class="p-1" :href="route('locale', 'en')">
                                     <div class="py-1 px-2 flex items-center cursor-pointer">
                                         English
                                     </div>
                                 </x-dropdown-link>
                             </x-slot>
-                        </x-dropdown-theme> --}}
+                        </x-dropdown-theme>
 
                         <!-- Button to change the theme -->
                         <button type="button" class="items-center block" id="theme-toggle-desktop">
@@ -180,25 +185,30 @@
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('projects.create')" :active="request()->routeIs('projects.create')">
-                {{ __('Crear proyecto') }}
+                {{-- {{ __('Crear proyecto') }} --}}
+                @lang('messages.create_project')
             </x-responsive-nav-link>
 
             @endauth
 
             <x-responsive-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
-                {{ __('Inicio')}}
+                {{-- {{ __('Inicio')}} --}}
+                @lang('messages.home')
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('about')" :active="request()->routeIs('about')">
-                {{ __('Sobre mí')}}
+                {{-- {{ __('Sobre mí')}} --}}
+                @lang('messages.about')
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('projects.index')" :active="request()->routeIs('projects.index') || request()->routeIs('projects.show')">
-                {{ __('Mis proyectos')}}
+                {{-- {{ __('Mis proyectos')}} --}}
+                @lang('messages.projects')
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
-                {{ __('Contacto')}}
+                {{-- {{ __('Contacto')}} --}}
+                @lang('messages.contact')
             </x-responsive-nav-link> 
 
             <a class="block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out" 
@@ -253,7 +263,10 @@
 
         <div class="py-6 px-10 border-t border-gray-200 dark:border-gray-600">
             <div class="flex items-center justify-between">
-                <label for="theme" class="text-slate-700 dark:text-slate-400 font-medium">Cambiar tema</label>
+                <label for="theme" class="text-slate-700 dark:text-slate-400 font-medium">
+                    {{-- Cambiar tema --}}
+                    @lang('messages.change_theme')
+                </label>
                 <button type="button" id="theme-toggle-mobile" class="w-32 px-4 relative flex items-center ring-1 ring-slate-900/10 rounded-lg shadow-sm p-2 text-slate-700 font-semibold dark:bg-slate-600 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-2 dark:hidden">
                         <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-purple-300/20 stroke-purple-400"></path>
@@ -264,34 +277,43 @@
                         <path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-purple-400"></path>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-purple-400"></path>
                     </svg>
-                    <span class="dark:hidden">Claro</span>
-                    <span class="hidden dark:inline">Oscuro</span>
+                    <span class="dark:hidden">
+                        {{-- Claro --}}
+                        @lang('messages.light')
+                    </span>
+                    <span class="hidden dark:inline">
+                        {{-- Oscuro --}}
+                        @lang('messages.dark')
+                    </span>
                 </button>
             </div>
         </div>
 
-        {{-- <div class="py-6 px-10 border-t border-gray-200 dark:border-gray-600">
+        <div class="py-6 px-10 border-t border-gray-200 dark:border-gray-600">
             <div class="flex items-center justify-between">
-                <label for="theme" class="text-slate-700 font-medium dark:text-slate-400">Cambiar idioma</label>
+                <label for="theme" class="text-slate-700 font-medium dark:text-slate-400">
+                    {{-- Cambiar idioma --}}
+                    @lang('messages.lang')
+                </label>
                 <div class="w-32 px-4 py-2 relative flex items-center ring-1 ring-slate-900/10 rounded-lg shadow-sm text-slate-700 font-semibold dark:bg-slate-600 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
                     <x-dropdown-theme align="right">
                         <x-slot name="trigger">
                             <button type="button" id="headlessui-listbox-button-:R5beilb6:" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="" aria-labelledby="headlessui-label-:R3beilb6: headlessui-listbox-button-:R5beilb6:" class="flex items-center">
                                 <a class="ml-2 text-slate-700 dark:text-slate-200">
-                                    Español
+                                    @lang('messages.lang')
                                 </a>
                                 <svg class="w-6 h-6 ml-2 text-slate-400" fill="none"><path d="m15 11-3 3-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                             </button>
                         </x-slot>
 
                         <x-slot name="content">
-                            <x-dropdown-link class="p-1 px-4 border border-gray-200 dark:border-gray-600 rounded-lg">
+                            <x-dropdown-link class="p-1 px-4 border border-gray-200 dark:border-gray-600 rounded-lg" :href="route('locale', 'es')">
                                 <div class="py-1 px-2 flex items-center cursor-pointer ">
                                 Español
                                 </div>
                             </x-dropdown-link>
 
-                            <x-dropdown-link class="mt-1 p-1 px-4 border border-gray-200 dark:border-gray-600 rounded-lg">
+                            <x-dropdown-link class="mt-1 p-1 px-4 border border-gray-200 dark:border-gray-600 rounded-lg" :href="route('locale', 'en')">
                                 <div class="py-1 px-2 flex items-center cursor-pointer ">
                                     English
                                 </div>
@@ -301,7 +323,7 @@
 
                 </div>
             </div>
-        </div> --}}
+        </div>
 
 
     </div>

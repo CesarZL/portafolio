@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Notifications\MensajesPortafolio;
 use App\Http\Controllers\ImagenController;
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Notification;
@@ -21,11 +22,21 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/download',  function(){
-    $file = public_path()."/docs/cv.pdf";
+    // $file = public_path()."/docs/cv.pdf";
+    // $headers = array(
+    //     'Content-Type: application/pdf',
+    // );
+    // return response()->download($file, 'cv-cesarzavala.pdf', $headers);
+
+    // si el local es en español se descargará el archivo en español y si es en inglés se descargará en inglés.
+    $locale = app()->getLocale();
+    $file = public_path()."/docs/cv-$locale.pdf";
     $headers = array(
         'Content-Type: application/pdf',
     );
     return response()->download($file, 'cv-cesarzavala.pdf', $headers);
+
+
 })->name('download');
 
 Route::get('/contact', function () {
@@ -35,7 +46,6 @@ Route::get('/contact', function () {
 Route::get('/projects', [ProjectsController::class, 'index'])->name('projects.index');
 
 Route::get('/projects/{id}', [ProjectsController::class, 'show'])->name('projects.show');
-
 
 
 Route::post('/contact', function(Request $request){
@@ -55,6 +65,8 @@ Route::post('/contact', function(Request $request){
 
 })->name('contact.send');  
 
+
+Route::get('locale/{lang}', [LocaleController::class, 'setLocale'])->name('locale');
 
 
 Route::middleware('rol.admin')->group(function () {

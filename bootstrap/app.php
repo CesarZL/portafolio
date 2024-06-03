@@ -16,6 +16,11 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'rol.admin' => RolAdmin::class,
         ]);
+
+        $middleware->web(append: [
+            \App\Http\Middleware\Localization::class,
+        ]);
+
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
