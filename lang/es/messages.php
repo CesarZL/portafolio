@@ -68,6 +68,8 @@ return [
     'name' => 'Nombre',
     'email' => 'Corre electrónico',
     'message' => 'Mensaje',
+    'made_with' => 'Hecho con el',
+    'by' => 'por',
+    
 ];
-
 

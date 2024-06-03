@@ -68,4 +68,7 @@ return [
     'name' => 'Name',
     'email' => 'Email',
     'message' => 'Message',
+    'made_with' => 'Made with the',
+    'by' => 'by',
+    
 ];

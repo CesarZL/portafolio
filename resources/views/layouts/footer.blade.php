@@ -2,7 +2,11 @@
     <div class="max-w-screen-xl mx-auto px-5">
         <div class="max-w-screen-xl mx-auto px-5">
             <p class="text-center text-sm text-slate-600 dark:text-slate-300 [text-wrap:balance]">
-                Hecho con el <span class="text-red-500">❤</span> por César Zavala López
+                {{-- Hecho con el  --}}
+                @lang('messages.made_with')
+                <span class="text-red-500">❤</span> 
+                {{-- por César Zavala López --}}
+                @lang('messages.by') César Zavala López
             </p>
         </div>
     </div>
