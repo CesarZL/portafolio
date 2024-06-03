@@ -21,16 +21,6 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::get('/download',  function(){
-    $locale = app()->getLocale();
-    $file = public_path()."/docs/cv-$locale.pdf";
-    $headers = array(
-        'Content-Type: application/pdf',
-    );
-    return response()->download($file, 'cv-cesarzavala.pdf', $headers);
-
-})->name('download');
-
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
@@ -56,6 +46,24 @@ Route::post('/contact', function(Request $request){
     return redirect()->route('contact')->with('status', 'message-sent');
 
 })->name('contact.send');  
+
+Route::get('/download',  function(){
+        $file = public_path()."/docs/1.pdf";
+        $headers = array(
+            'Content-Type: application/pdf',
+        );
+        return response()->download($file, 'documento.pdf', $headers);
+    
+})->name('download.es');
+
+Route::get('/download/en',  function(){
+    $file = public_path()."/docs/2.pdf";
+    $headers = array(
+        'Content-Type: application/pdf',
+    );
+    return response()->download($file, 'document.pdf', $headers);
+
+})->name('download.en');
 
 
 Route::get('locale/{lang}', [LocaleController::class, 'setLocale'])->name('locale');

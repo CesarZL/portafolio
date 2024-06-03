@@ -20,16 +20,29 @@
             </p>
 
             <div class="mt-6 text-center">
-                <a class=" gap-3 inline-flex rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-purple-600 text-white hover:bg-purple-800 items-center justify-center transition duration-300 ease-out"
-                    href="{{route('download')}}">
-                    <svg viewBox="0 0 24 24" class="text-white w-5 h-5" astro-icon="bx:bxs-cloud-download">
-                        <path fill="currentColor"
-                            d="M18.944 11.112C18.507 7.67 15.56 5 12 5 9.244 5 6.85 6.61 5.757 9.149 3.609 9.792 2 11.82 2 14c0 2.657 2.089 4.815 4.708 4.971V19H17.99v-.003L18 19c2.206 0 4-1.794 4-4a4.008 4.008 0 0 0-3.056-3.888zM8 12h3V9h2v3h3l-4 5-4-5z">
-                        </path>
-                    </svg>
-    
+                @if (app()->getLocale() == 'en')
+                    <a class=" gap-3 inline-flex rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-purple-600 text-white hover:bg-purple-800 items-center justify-center transition duration-300 ease-out"
+                    href="{{route('download.en')}}">
+                        <svg viewBox="0 0 24 24" class="text-white w-5 h-5">
+                            <path fill="currentColor"
+                                d="M18.944 11.112C18.507 7.67 15.56 5 12 5 9.244 5 6.85 6.61 5.757 9.149 3.609 9.792 2 11.82 2 14c0 2.657 2.089 4.815 4.708 4.971V19H17.99v-.003L18 19c2.206 0 4-1.794 4-4a4.008 4.008 0 0 0-3.056-3.888zM8 12h3V9h2v3h3l-4 5-4-5z">
+                            </path>
+                        </svg>
+
+                        {{-- Descarga mi CV --}}
+                        @lang('messages.download_cv')
+                    </a>
+                @else
+                    <a class=" gap-3 inline-flex rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-purple-600 text-white hover:bg-purple-800 items-center justify-center transition duration-300 ease-out"
+                    href="{{route('download.es')}}">
+                        <svg viewBox="0 0 24 24" class="text-white w-5 h-5">
+                            <path fill="currentColor"
+                                d="M18.944 11.112C18.507 7.67 15.56 5 12 5 9.244 5 6.85 6.61 5.757 9.149 3.609 9.792 2 11.82 2 14c0 2.657 2.089 4.815 4.708 4.971V19H17.99v-.003L18 19c2.206 0 4-1.794 4-4a4.008 4.008 0 0 0-3.056-3.888zM8 12h3V9h2v3h3l-4 5-4-5z">
+                            </path>
+                        </svg>
                     {{-- Descarga mi CV --}}
                     @lang('messages.download_cv')
+                @endif
                 </a>
             </div>
 
