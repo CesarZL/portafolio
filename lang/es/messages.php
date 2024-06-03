@@ -70,6 +70,8 @@ return [
     'message' => 'Mensaje',
     'made_with' => 'Hecho con el',
     'by' => 'por',
+    'dark' => 'oscuro',
+    'light' => 'claro',
     
 ];
 

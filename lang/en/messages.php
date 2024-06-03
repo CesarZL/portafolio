@@ -70,5 +70,6 @@ return [
     'message' => 'Message',
     'made_with' => 'Made with the',
     'by' => 'by',
-    
+    'dark' => 'Dark',
+    'light' => 'Light',  
 ];
