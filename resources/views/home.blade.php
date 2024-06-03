@@ -136,7 +136,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-16 gap-10">
             @foreach ($projects as $project)
             <div>
-                <a href="{{ route('projects.show', $project) }}">
+                <a href="{{ route('projects.show', $project) }}" wire:navigate>
                     <article
                         class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-xl duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
                         <div class="flex justify-between items-center mb-5 text-gray-500">
