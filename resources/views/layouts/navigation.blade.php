@@ -33,18 +33,18 @@
                         @lang('messages.about')
                     </x-nav-link>
 
-                    <x-nav-link :href="route('projects.index')" :active="request()->routeIs('projects.index') || request()->routeIs('projects.show')">
+                    <x-nav-link :href="route('projects.index')" :active="request()->routeIs('projects.index') || request()->routeIs('projects.show')" wire:navigate>
                         {{-- {{ __('Proyectos') }} --}}
                         @lang('messages.projects')
                     </x-nav-link>
                         
-                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')" wire:navigate>
                         {{-- {{ __('Contacto') }} --}}
                         @lang('messages.contact')
                     </x-nav-link>
 
                     @auth
-                       <x-nav-link :href="route('projects.create')" :active="request()->routeIs('projects.create')">
+                       <x-nav-link :href="route('projects.create')" :active="request()->routeIs('projects.create')" wire:navigate>
                             {{-- {{ __('Crear proyecto') }} --}}
                             @lang('messages.create_project')
                         </x-nav-link>

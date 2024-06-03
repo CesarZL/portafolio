@@ -22,12 +22,12 @@
                 </p>
                 <div class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
                     <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-white border-2 border-purple-500 hover:bg-purple-50 text-purple-600  flex gap-1 items-center justify-center transition duration-300 ease-out"
-                        href="{{route('about')}}">
+                        href="{{route('about')}}" wire:navigate>
                         @lang('messages.about')
                     </a>
 
                     <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-purple-600 text-white hover:bg-purple-800 flex gap-1 items-center justify-center transition duration-300 ease-out"
-                        href="{{route('contact')}}">
+                        href="{{route('contact')}}" wire:navigate>
                         @lang('messages.contact')
                     </a>
                 </div>
@@ -35,7 +35,7 @@
             <div class="py-3 lg:col-span-3 lg:-mr-44 z-30">
                 <img src="{{asset('img/hero.jpg')}}" alt="César Zavala López - Desarrollador web"
                     class="w-5/6 md:w-full md:h-full lg:my-32 md:my-10 my-12 rounded-xl max-w-md mx-auto shadow-2xl"
-                    loading="lazy" width="1270" height="1652" decoding="async">
+                    width="1270" height="1652" decoding="async">
             </div>
         </div>
     </div>
@@ -180,7 +180,7 @@
                 @auth
                 <div class="text-center mt-5">
                     <a class="rounded-lg text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple py-2 bg-purple-600 text-white hover:bg-purple-800 flex gap-1 items-center justify-center transition duration-300 ease-out"
-                        href="{{route('projects.edit', $project)}}">
+                        href="{{route('projects.edit', $project)}}" wire:navigate>
                         @lang('messages.edit_project')
                     </a>
                 </div>
@@ -204,7 +204,7 @@
 
         <div class="flex justify-center items-center mt-10 gap-4">
             <a class="rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-white border-2 border-purple-500 hover:bg-purple-50 text-purple-600  flex gap-1 items-center justify-center transition duration-300 ease-out"
-                href="{{ route('projects.index') }}">
+                href="{{ route('projects.index') }}" wire:navigate>
                 @lang('messages.see_more')
             </a>
         </div>

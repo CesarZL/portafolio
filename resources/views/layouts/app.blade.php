@@ -14,6 +14,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @livewireStyles
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gradient-to-tr from-gray-100 to-gray-200 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-slate-800">
@@ -25,5 +26,7 @@
         </div>
         
         @stack('scripts')
+        @livewireScripts
+
     </body>
 </html>

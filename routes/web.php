@@ -22,20 +22,12 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/download',  function(){
-    // $file = public_path()."/docs/cv.pdf";
-    // $headers = array(
-    //     'Content-Type: application/pdf',
-    // );
-    // return response()->download($file, 'cv-cesarzavala.pdf', $headers);
-
-    // si el local es en español se descargará el archivo en español y si es en inglés se descargará en inglés.
     $locale = app()->getLocale();
     $file = public_path()."/docs/cv-$locale.pdf";
     $headers = array(
         'Content-Type: application/pdf',
     );
     return response()->download($file, 'cv-cesarzavala.pdf', $headers);
-
 
 })->name('download');
 

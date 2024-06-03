@@ -1,16 +1,7 @@
-import './bootstrap';
-import './navbar.js';
-import './theme-mode.js';
-
 import Editor from '@toast-ui/editor';
 import '@toast-ui/editor/dist/toastui-editor.css';
 import '@toast-ui/editor/dist/theme/toastui-editor-dark.css';
 import '@toast-ui/editor/dist/i18n/es-es';
-
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-Alpine.start();
 
 const editorElement = document.querySelector('#editor');
 const editor_enElement = document.querySelector('#editor_en');

@@ -74,7 +74,7 @@
 
         <div class="grid sm:grid-cols-2 gap-10 mx-auto mt-24">
             <div class="relative">
-                <img class="rounded-xl w-full max-w-md mx-auto shadow-2xl" loading="lazy" width="1270" height="1652"
+                <img class="rounded-xl w-full max-w-md mx-auto shadow-2xl"  width="1270" height="1652"
                     decoding="async" src="{{asset('img/me.jpg')}}" alt="César Zavala López">
             </div>
             <div class="place-self-center">
