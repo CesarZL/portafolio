@@ -45,12 +45,11 @@
                         </x-nav-link>
                     @endauth
 
-                    <div class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-purple-800">
-                        {{-- Dropdown Theme --}}
-                        <x-dropdown-theme align="right">
+                    <div class="flex items-center border-l border-slate-300 ml-6 pl-6 dark:border-gray-700">
+                        {{-- Dropdown language --}}
+                        {{-- <x-dropdown-theme align="right">
                             <x-slot name="trigger">
-                                {{-- Button to change the language --}}
-                                <button type="button" id="headlessui-listbox-button-:R5beilb6:" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="" aria-labelledby="headlessui-label-:R3beilb6: headlessui-listbox-button-:R5beilb6:" class="flex items-center">
+                                <button type="button" id="headlessui-listbox-button-:R5beilb6:" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="" aria-labelledby="headlessui-label-:R3beilb6: headlessui-listbox-button-:R5beilb6:" class="flex items-center mr-6">
                                     <a class=" text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" class="w-6 h-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
@@ -72,10 +71,10 @@
                                     </div>
                                 </x-dropdown-link>
                             </x-slot>
-                        </x-dropdown-theme>
+                        </x-dropdown-theme> --}}
 
                         <!-- Button to change the theme -->
-                        <button type="button" class="items-center ml-6 block" id="theme-toggle-desktop">
+                        <button type="button" class="items-center block" id="theme-toggle-desktop">
                             <span class="dark:hidden">
                                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
                                     <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-purple-300/20 stroke-purple-400"></path>
@@ -99,6 +98,15 @@
                                 </path>
                             </svg>
                         </a>
+
+                        {{-- Linkedin link --}}
+                        <a href="https://www.linkedin.com/in/c%C3%A9sar-zavala-l%C3%B3pez-2774491a5/"
+                        class="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"></path>
+                        </svg>
+                        </a>
+
                     </div>
 
                     @auth
@@ -192,6 +200,20 @@
             <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                 {{ __('Contacto')}}
             </x-responsive-nav-link> 
+
+            <a class="block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out" 
+            href="https://github.com/cesarzl" target="_blank">
+                Github
+            </a> 
+
+            <a class="block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out" 
+            href="https://www.linkedin.com/in/c%C3%A9sar-zavala-l%C3%B3pez-2774491a5/" target="_blank">
+                Linkedin
+            </a> 
+
+
+
+
         </div>
 
         @auth
@@ -248,7 +270,7 @@
             </div>
         </div>
 
-        <div class="py-6 px-10 border-t border-gray-200 dark:border-gray-600">
+        {{-- <div class="py-6 px-10 border-t border-gray-200 dark:border-gray-600">
             <div class="flex items-center justify-between">
                 <label for="theme" class="text-slate-700 font-medium dark:text-slate-400">Cambiar idioma</label>
                 <div class="w-32 px-4 py-2 relative flex items-center ring-1 ring-slate-900/10 rounded-lg shadow-sm text-slate-700 font-semibold dark:bg-slate-600 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
@@ -279,7 +301,7 @@
 
                 </div>
             </div>
-        </div>
+        </div> --}}
 
 
     </div>

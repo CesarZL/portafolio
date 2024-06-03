@@ -1,10 +1,10 @@
 <x-app-layout>
     <div class="max-w-screen-xl mx-auto px-5 mb-20">
         
-        <div class="mt-32 text-center">
+        <div class="mt-24 text-center">
             <div class="mb-4">
                 <span class="bg-purple-100 border-purple-200 border text-purple-600 rounded-full text-xs font-medium px-3 py-1 ">
-                    ¿Quién soy?
+                    Acerca de mí
                 </span>
             </div>
             <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight dark:text-white">
@@ -12,37 +12,34 @@
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-400">César Zavala López</span>
             </h1>
             <p class="text-lg mt-4 text-slate-500 mx-auto max-w-xl dark:text-white">
-                Un apasionado egresado de Ingeniería en Tecnologías de la Información de la Universidad Politécnica de
-                Victoria, originario de Cd. Victoria, Tamaulipas, México, con 23 años de edad.
+                Soy un apasionado egresado de Ingeniería en Tecnologías de la Información de la Universidad Politécnica de
+                Victoria, originario de Cd. Victoria, Tamaulipas, México, con 23 años de edad. 🎓🌎
             </p>
+
+            <div class="mt-6 text-center">
+                <a class=" gap-3 inline-flex rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-purple-600 text-white hover:bg-purple-800 items-center justify-center transition duration-300 ease-out"
+                    href="{{route('download')}}">
+                    <svg viewBox="0 0 24 24" class="text-white w-5 h-5" astro-icon="bx:bxs-cloud-download">
+                        <path fill="currentColor"
+                            d="M18.944 11.112C18.507 7.67 15.56 5 12 5 9.244 5 6.85 6.61 5.757 9.149 3.609 9.792 2 11.82 2 14c0 2.657 2.089 4.815 4.708 4.971V19H17.99v-.003L18 19c2.206 0 4-1.794 4-4a4.008 4.008 0 0 0-3.056-3.888zM8 12h3V9h2v3h3l-4 5-4-5z">
+                        </path>
+                    </svg>
+    
+                    Descarga mi CV
+                </a>
+            </div>
+
         </div>
 
-
-        <div class="mt-6 text-center">
-            <a class=" gap-3 inline-flex rounded-full text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple px-6 py-2.5 bg-purple-600 text-white hover:bg-purple-800 items-center justify-center transition duration-300 ease-out"
-                href="{{route('download')}}">
-                <svg viewBox="0 0 24 24" class="text-white w-5 h-5" astro-icon="bx:bxs-cloud-download">
-                    <path fill="currentColor"
-                        d="M18.944 11.112C18.507 7.67 15.56 5 12 5 9.244 5 6.85 6.61 5.757 9.149 3.609 9.792 2 11.82 2 14c0 2.657 2.089 4.815 4.708 4.971V19H17.99v-.003L18 19c2.206 0 4-1.794 4-4a4.008 4.008 0 0 0-3.056-3.888zM8 12h3V9h2v3h3l-4 5-4-5z">
-                    </path>
-                </svg>
-
-                Descarga mi CV
-            </a>
-        </div>
-
-
-        <div class="mt-5 py-6">
-            <div class="text-center">
-                <div class="mt-24">
-                    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight dark:text-white">
-                        Estas son algunas de <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500"> mis certificaciones</span>
-                    </h2>
-                    <p class="text-lg mt-4 text-slate-600 dark:text-white">
-                        A lo largo de mi carrera profesional he obtenido diversas certificaciones que avalan mis 
-                        conocimientos en diferentes áreas de la tecnología. 
-                    </p>
-                </div>
+        <div class="mt-24">
+            <div class="text-center ">
+                <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight dark:text-white">
+                    Estas son algunas de <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500"> mis certificaciones</span>
+                </h2>
+                <p class="text-lg mt-4 text-slate-600 dark:text-white max-w-3xl mx-auto">
+                    A lo largo de mi carrera profesional he obtenido diversas certificaciones que avalan mis 
+                    conocimientos en diferentes áreas de la tecnología. 📜💻
+                </p>
         
                 <div class="flex gap-x-8 gap-y-4 md:gap-20 lg:gap-28 items-center justify-center mt-8 flex-wrap">
                     <a href="https://www.credly.com/badges/3be95b04-dcff-4c52-ae93-b721f3111d29" target="_blank" class="cursor-pointer duration-200 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800 rounded-2xl hover:shadow-lg p-2">
@@ -75,13 +72,10 @@
                     Sobre mí
                 </h2>
                 <p class="text-lg max-w-xl mt-4 leading-relaxed text-slate-500 dark:text-white">
-                    Me especializo en el desarrollo de aplicaciones web,
-                    destacándome en el uso de Laravel para construir soluciones
-                    integrales desde el backend hasta el frontend.
-                    Mis proyectos van desde la investigación y el desarrollo de
-                    la experiencia de usuario hasta la implementación de la aplicación
-                    en un entorno de producción. Me encanta aprender nuevas tecnologías
-                    y compartir mis conocimientos con los demás.
+                    Mi especialización se centra en el desarrollo de aplicaciones web, destacándome en el uso de Laravel para
+                    construir soluciones integrales desde el backend hasta el frontend. Mis proyectos abarcan desde la investigación
+                    y desarrollo de la experiencia de usuario hasta la implementación de la aplicación en un entorno de producción.
+                    Disfruto aprender nuevas tecnologías y compartir mis conocimientos con los demás. 🚀📚
                 </p>
                 <ul class="grid mt-6 text-left gap-y-4">
 

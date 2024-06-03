@@ -1,21 +1,21 @@
 <x-app-layout>
     <div class="max-w-screen-xl mx-auto px-5">
-        <div class="mt-16 text-center">
+        <div class="mt-24 text-center">
             <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
                 Contacto
             </h1>
             <p class="text-lg mt-4 text-slate-500 mx-auto max-w-xl dark:text-white">
-                Envía un mensaje y te responderé lo antes posible.
+                Si deseas ponerte en contacto, no dudes en enviarme un mensaje. Responderé lo antes posible.
             </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+        <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-24">
             <div>
                 <h2 class="font-medium text-2xl text-gray-800 dark:text-white">
                     Contáctame
                 </h2>
                 <p class="text-lg leading-relaxed text-slate-500 mt-3 dark:text-white">
-                    ¿Tienes alguna duda? Estoy aquí para ayudarte. Rellena el formulario o llámame por teléfono.
+                    ¿Tienes alguna consulta? Estoy aquí para ayudarte. Mándame un correo o llámame y me pondré en contacto contigo.
                 </p>
                 <div class="mt-5">
                     <div class="flex items-center mt-2 space-x-2 text-gray-600 dark:text-gray-400">
@@ -65,14 +65,14 @@
 
                     <div class="mb-3">
                         <x-input-label for="message" :value="__('Mensaje')" />
-                        <textarea placeholder="¿Sobre qué quieres hablar? ¡Cuéntame!"
+                        <textarea placeholder="¿En qué puedo ayudarte? Cuéntame" id="message" 
                             class="text-sm border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-purple-500 dark:focus:border-purple-600 focus:ring-purple-500 dark:focus:ring-purple-600 rounded-md shadow-sm placeholder-gray-400 dark:placeholder-gray-500 mt-1 block w-full"
                             name="message"></textarea>
 
                         <x-input-error class="mt-2" :messages="$errors->get('message')" />
                     </div>
 
-                    <x-primary-button class="w-full justify-center">
+                    <x-primary-button class="mt-3 w-full justify-center">
                         {{ __('Enviar mensaje') }}
                     </x-primary-button>
                 </form>
