@@ -18,17 +18,17 @@
                 <div class="hidden space-x-8 md:-my-px md:ms-10 md:flex me-3">
 
                     @auth
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
                             {{ __('Dashboard') }}
                         </x-nav-link>
                     @endauth
 
-                    <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
+                    <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')" wire:navigate>
                         {{-- {{ __('Inicio') }} --}}
                         @lang('messages.home')
                     </x-nav-link>
 
-                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')" wire:navigate>
                         {{-- {{ __('Sobre mí') }} --}}
                         @lang('messages.about')
                     </x-nav-link>
