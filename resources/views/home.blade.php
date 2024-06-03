@@ -122,7 +122,7 @@
         </div>
     </div>
 
-    <div class="max-w-screen-xl mx-auto px-5{{ $projects->isEmpty() ? 'hidden' : '' }}">
+    <div class="max-w-screen-xl mx-auto px-5 {{ $projects->isEmpty() ? 'hidden' : '' }}">
         <div class="mt-24 max-w-3xl mx-auto">
             <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center dark:text-white">
                 Explora algunos de <span
