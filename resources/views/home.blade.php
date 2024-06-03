@@ -259,7 +259,7 @@
                     <div>
                         <h3 class="font-semibold text-lg dark:text-white">
                             {{-- Dessarrollador --}}
-                            @lang('messages.developer')
+                            @lang('messages.title_dev')
                         </h3>
 
                         <h2 class="text-slate-500 dark:text-slate-300 font-semibold">
@@ -340,7 +340,7 @@
                     <div>
                         <h3 class="font-semibold text-lg dark:text-white">
                             {{-- Desarrollador --}}
-                            @lang('messages.developer')
+                            @lang('messages.title_dev')
                         </h3>
 
                         <h2 class="text-slate-500 dark:text-slate-300 font-semibold">
