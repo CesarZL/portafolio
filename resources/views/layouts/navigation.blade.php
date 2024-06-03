@@ -64,13 +64,13 @@
                             </x-slot>
     
                             <x-slot name="content">
-                                <x-dropdown-link class="p-1" :href="route('locale', 'es')">
+                                <x-dropdown-link class="p-1" :href="route('locale', 'es')" wire:navigate>
                                     <div class="py-1 px-2 flex items-center cursor-pointer ">
                                     Español
                                 </div>
                                 </x-dropdown-link>
     
-                                <x-dropdown-link class="p-1" :href="route('locale', 'en')">
+                                <x-dropdown-link class="p-1" :href="route('locale', 'en')" wire:navigate>
                                     <div class="py-1 px-2 flex items-center cursor-pointer">
                                         English
                                     </div>
@@ -307,13 +307,13 @@
                         </x-slot>
 
                         <x-slot name="content">
-                            <x-dropdown-link class="p-1 px-4 border border-gray-200 dark:border-gray-600 rounded-lg" :href="route('locale', 'es')">
+                            <x-dropdown-link class="p-1 px-4 border border-gray-200 dark:border-gray-600 rounded-lg" :href="route('locale', 'es')" wire:navigate>
                                 <div class="py-1 px-2 flex items-center cursor-pointer ">
                                 Español
                                 </div>
                             </x-dropdown-link>
 
-                            <x-dropdown-link class="mt-1 p-1 px-4 border border-gray-200 dark:border-gray-600 rounded-lg" :href="route('locale', 'en')">
+                            <x-dropdown-link class="mt-1 p-1 px-4 border border-gray-200 dark:border-gray-600 rounded-lg" :href="route('locale', 'en')" wire:navigate>
                                 <div class="py-1 px-2 flex items-center cursor-pointer ">
                                     English
                                 </div>
