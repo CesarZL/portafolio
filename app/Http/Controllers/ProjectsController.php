@@ -44,7 +44,7 @@ class ProjectsController extends Controller
             'title_en' => 'required|string|max:255',
             'abstract' => 'required|string|max:255',
             'abstract_en' => 'required|string|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:3072', // Ajusta el tamaño máximo según tus necesidades
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:5120', // Ajusta el tamaño máximo según tus necesidades
             'content' => 'required|string',
             'content_en' => 'required|string',
             'principal_category' => 'required', // Asegúrate de que la categoría exista en la base de datos
@@ -114,7 +114,7 @@ class ProjectsController extends Controller
         'title_en' => 'required|string|max:255',
         'abstract' => 'required|string|max:255',
         'abstract_en' => 'required|string|max:255',
-        'image' => 'sometimes|image|mimes:jpeg,png,jpg|max:3072', // Ajusta el tamaño máximo según tus necesidades
+        'image' => 'sometimes|image|mimes:jpeg,png,jpg|max:5120', // Ajusta el tamaño máximo según tus necesidades
         'content' => 'required|string',
         'content_en' => 'required|string',
         'principal_category' => 'required', // Asegúrate de que la categoría exista en la base de datos
