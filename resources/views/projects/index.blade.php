@@ -53,8 +53,8 @@
                             @endforeach
                         </div>
                         <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
-                            <span
-                                class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300">
+                            {{-- <span class="transition duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-300 dark:to-indigo-300"> --}}
+                            <span>
                                 @if (app()->getLocale() == 'en')
                                 {{ $project->title_en }}
                                 @else
