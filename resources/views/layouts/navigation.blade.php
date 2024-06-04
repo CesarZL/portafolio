@@ -44,7 +44,7 @@
                     </x-nav-link>
 
                     @auth
-                       <x-nav-link :href="route('projects.create')" :active="request()->routeIs('projects.create')" wire:navigate>
+                       <x-nav-link :href="route('projects.create')" :active="request()->routeIs('projects.create')">
                             {{-- {{ __('Crear proyecto') }} --}}
                             @lang('messages.create_project')
                         </x-nav-link>
