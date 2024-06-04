@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Models\Category;
-use Illuminate\Http\Request;
-use Intervention\Image\Facades\Image;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Rules\CheckboxesBetween;
+use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 
 class ProjectsController extends Controller
@@ -43,13 +44,13 @@ class ProjectsController extends Controller
             'title_en' => 'required|string|max:255',
             'abstract' => 'required|string|max:255',
             'abstract_en' => 'required|string|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Ajusta el tamaño máximo según tus necesidades
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:3072', // Ajusta el tamaño máximo según tus necesidades
             'content' => 'required|string',
             'content_en' => 'required|string',
             'principal_category' => 'required', // Asegúrate de que la categoría exista en la base de datos
-            'categories' => 'array|min:1|max:3', // Asegúrate de que al menos dos categorías secundarias se hayan seleccionado
+            'categories' => 'array|required', // Asegúrate de que las categorías existan en la base de datos
         ]);
-
+        
         // Obtener la imagen del request
         $image = $request->file('image');
         
@@ -71,8 +72,8 @@ class ProjectsController extends Controller
             return $categoryId != $request->input('principal_category');
         });
 
-        // Validar que al menos una categoría secundaria se haya seleccionado
-        if (count($categories) < 3) {
+        // Validar que al menos una categoría secundaria se haya seleccionado y no más de tres
+        if (count($categories) < 0 || count($categories) > 3){
             return back()->withErrors(['categories' => 'Debes seleccionar al menos dos categorías secundarias.'])->withInput();
         }
 
@@ -113,13 +114,13 @@ class ProjectsController extends Controller
         'title_en' => 'required|string|max:255',
         'abstract' => 'required|string|max:255',
         'abstract_en' => 'required|string|max:255',
-        'image' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048', // Ajusta el tamaño máximo según tus necesidades
+        'image' => 'sometimes|image|mimes:jpeg,png,jpg|max:3072', // Ajusta el tamaño máximo según tus necesidades
         'content' => 'required|string',
         'content_en' => 'required|string',
         'principal_category' => 'required', // Asegúrate de que la categoría exista en la base de datos
-        'categories' => 'array|min:1|max:3', // Asegúrate de que al menos dos categorías secundarias se hayan seleccionado
+        'categories' => 'array|required', // Asegúrate de que las categorías existan en la base de datos
     ]);
-
+    
     $project = Project::findOrFail($id);
 
     // Si se proporciona una nueva imagen, procesarla
@@ -153,9 +154,9 @@ class ProjectsController extends Controller
         return $categoryId != $request->input('principal_category');
     });
 
-    // Validar que al menos una categoría secundaria se haya seleccionado
-    if (count($categories) < 1) {
-        return back()->withErrors(['categories' => 'Debes seleccionar al menos una categoría secundaria.'])->withInput();
+    // Validar que al menos una categoría secundaria se haya seleccionado y no más de tres
+    if (count($categories) < 0 || count($categories) > 3){
+        return back()->withErrors(['categories' => 'Debes seleccionar al menos dos categorías secundarias.'])->withInput();
     }
 
     // Actualizar los datos del proyecto

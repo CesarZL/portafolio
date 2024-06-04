@@ -81,7 +81,7 @@
                                     <div class="flex items-center ps-3">
                                         <input id="categories-{{ $category->id }}" type="checkbox" value="{{ $category->id }}" name="categories[]" 
                                                class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500 dark:checked:bg-purple-600"
-                                               {{ in_array($category->id, old('categories', [])) ? 'checked' : '' }}>
+                                               {{ in_array($category->id, old('categories') ?? []) ? 'checked' : '' }}>
                                         <label for="categories-{{ $category->id }}" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{ $category->name }}</label>
                                     </div>
                                 </li>
