@@ -138,7 +138,7 @@
             <div>
                 <a href="{{ route('projects.show', $project) }}" wire:navigate>
                     <article
-                        class="p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-xl duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
+                        class="h-full p-6 bg-white rounded-lg border-gray-200 shadow-md dark:bg-gray-800 hover:shadow-xl duration-300 ease-in-out border dark:hover:border-purple-700 dark:border-gray-800">
                         <div class="flex justify-between items-center mb-5 text-gray-500">
                             <span
                                 class="text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded bg-purple-100 text-purple-800 dark:bg-purple-200 dark:text-purple-800 border-purple-200 dark:border-purple-700 border">
@@ -180,7 +180,7 @@
                 @auth
                 <div class="text-center mt-5">
                     <a class="rounded-lg text-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 focus-visible:outline-none focus-visible:shadow-outline-purple py-2 bg-purple-600 text-white hover:bg-purple-800 flex gap-1 items-center justify-center transition duration-300 ease-out"
-                        href="{{route('projects.edit', $project)}}" wire:navigate>
+                        href="{{route('projects.edit', $project)}}">
                         @lang('messages.edit_project')
                     </a>
                 </div>

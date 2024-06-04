@@ -17,12 +17,6 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 md:-my-px md:ms-10 md:flex me-3">
 
-                    @auth
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
-                            {{ __('Dashboard') }}
-                        </x-nav-link>
-                    @endauth
-
                     <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')" wire:navigate>
                         {{-- {{ __('Inicio') }} --}}
                         @lang('messages.home')
@@ -180,9 +174,6 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden md:hidden">
         <div class="pt-2 pb-3 space-y-1">
             @auth
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('projects.create')" :active="request()->routeIs('projects.create')">
                 {{-- {{ __('Crear proyecto') }} --}}
