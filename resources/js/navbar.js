@@ -39,3 +39,8 @@ document.addEventListener("scroll", (event) => {
         ticking = true;
     }
 });
+
+// Call OnScroll on DOMContentLoaded
+document.addEventListener("DOMContentLoaded", (event) => {
+    OnScroll(window.scrollY);
+});
