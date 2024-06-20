@@ -4,6 +4,7 @@ use App\Models\User;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
 use App\Notifications\MensajesPortafolio;
 use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\LocaleController;
@@ -45,7 +46,7 @@ Route::post('/contact', function(Request $request){
 
     return redirect()->route('contact')->with('status', 'message-sent');
 
-})->name('contact.send');  
+})->middleware(ProtectAgainstSpam::class)->name('contact.send');  
 
 Route::get('/download',  function(){
         $file = public_path()."/docs/1.pdf";

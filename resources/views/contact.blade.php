@@ -53,6 +53,9 @@
             <div class="bg-white p-5 md:p-8 rounded-xl mb-5 shadow-lg dark:bg-gray-800">
                 <form action="{{ route('contact.send') }}" method="POST" novalidate>
                     @csrf
+                    
+                    <x-honeypot />
+
                     <div class="mb-5">
                         <x-input-label for="name" :value="__('messages.name')" />
                         <x-text-input id="name" name="name" type="text" class="mt-1 block w-full"
